@@ -1,0 +1,44 @@
+@import '@styles/variables';
+
+.nav {
+    &-list {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        list-style: none;
+        padding: 0;
+        margin-top: 2rem;
+
+        &-link {
+            transition: $standard-transition;
+
+            > a {
+                cursor: pointer;
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                row-gap: 6px;
+                text-decoration: none;
+                color: $color-default;
+
+                > sup {
+                    margin: 0;
+                    font-size: small;
+                }
+                > strong {
+                    margin: 0;
+                    font-size: large;
+                }
+            }
+
+            &.active {
+                background-color: $color-primary-transparent;
+                border-right: 2px solid $color-primary;
+
+                > a {
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '@styles/variables';
+
+body {
+    margin: 0;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.button {
+    &-default {
+        background-color: $color-primary;
+        padding: 0.25rem 1rem;
+        color: $color-white;
+        font-size: large;
+        font-family: inherit;
+        font-weight: 600;
+        min-width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        border-color: transparent;
+        transition: $standard-transition;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-primary-hover;
+        }
+    }
+
+    &-icon {
+        background-color: $color-white;
+        color: $color-default;
+        padding: 0.25rem 0.25rem;
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
+
+        font-size: large;
+        font-family: inherit;
+        border-color: transparent;
+        transition: $standard-transition;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $color-primary-transparent;
+            color: $color-primary;
+        }
+    }
+}
+
+.card {
+    background-color: $color-white;
+    border: 1px solid $color-default;
+    transition: $standard-transition;
+
+    &:hover {
+        transform: translate(4px, -4px);
+        box-shadow: -8px 8px 0 $color-default;
+    }
+}

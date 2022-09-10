@@ -1,0 +1,23 @@
+@import '@styles/variables';
+
+.products-card {
+    &-box {
+        grid-row: 2;
+        padding: 2rem;
+
+        > a {
+            text-decoration: none;
+            color: $color-default;
+
+            > h3 {
+                margin: 0.5rem 0;
+            }
+
+            > p {
+                margin-top: 0.7rem;
+                padding-top: 1rem;
+                border-top: 1px solid $color-default-light;
+            }
+        }
+    }
+}
