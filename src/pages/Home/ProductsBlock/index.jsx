@@ -6,32 +6,46 @@ import './products.scss';
 
 const ProductsBlock = () => {
     return (
-        <div className="products-container" id="first-products">
+        <div className="products-container">
             <h1>Explore products</h1>
 
-            <div className="products-box">
-                <h2>Most popular</h2>
-                <CardBlock />
-                <CardBlock />
-                <CardBlock />
-                <CardBlock />
+            <div className="products-box" id="first-products">
+                <h2>First products</h2>
+                <div className="products-box-grid">
+                    <CardBlock />
+                    <CardBlock />
+                    <CardBlock />
+                    <CardBlock />
+                </div>
             </div>
 
             <div className="products-box" id="second-products">
-                <h2>Main Block</h2>
-                <CardBlock />
-                <CardBlock />
-                <CardBlock />
-                <CardBlock />
+                <h2>Second products</h2>
+                <div className="products-box-grid">
+                    <CardBlock />
+                    <CardBlock />
+                    <CardBlock />
+                    <CardBlock />
+                </div>
             </div>
 
             <div className="products-box" id="third-products">
-                <h2>Third Block</h2>
-                <CardBlock />
-                <CardBlock />
-                <CardBlock />
-                <CardBlock />
+                <h2>Third products</h2>
+                <div className="products-box-grid">
+                    <CardBlock />
+                    <CardBlock />
+                    <CardBlock />
+                    <CardBlock />
+                </div>
             </div>
+
+            <ul style={{ listStyle: 'none' }}>
+                <li style={{ height: '8rem' }}>Plain text</li>
+                <li style={{ height: '8rem' }}>Plain text</li>
+                <li style={{ height: '8rem' }}>Plain text</li>
+                <li style={{ height: '8rem' }}>Plain text</li>
+                <li style={{ height: '8rem' }}>Plain text</li>
+            </ul>
         </div>
     );
 };

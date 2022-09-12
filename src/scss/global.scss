@@ -26,8 +26,10 @@ body {
     }
 
     &-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         background-color: $color-white;
-        color: $color-default;
         padding: 0.25rem 0.25rem;
         border-radius: 4px;
         width: 40px;
@@ -41,7 +43,6 @@ body {
 
         &:hover {
             background-color: $color-primary-transparent;
-            color: $color-primary;
         }
     }
 }

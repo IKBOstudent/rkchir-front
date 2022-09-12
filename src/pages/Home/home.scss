@@ -4,27 +4,53 @@
     }
 
     &-container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         max-width: 1440px;
-        padding: 0 6rem;
+        padding-top: 0;
+        padding-bottom: 2rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
         margin: 0 auto;
-        display: flex;
-        align-items: flex-start;
         column-gap: 2rem;
     }
 
     &-sideBox {
-        flex: 1;
+        grid-column: span 1;
         position: sticky;
         top: 5rem;
         align-self: flex-start;
         padding-top: 2rem;
+        z-index: 2;
     }
 
     &-mainBox {
-        flex: 4;
+        grid-column: 2 / span 4;
         position: relative;
-        height: 4000px;
         padding-top: 2rem;
-        padding-bottom: 60px;
+    }
+
+    @media only screen and (max-width: 1199px) {
+        &-sideBox {
+            display: none;
+        }
+
+        &-mainBox {
+            grid-column: span 4;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        &-container {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        &-container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
     }
 }

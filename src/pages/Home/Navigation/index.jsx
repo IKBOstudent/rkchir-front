@@ -6,7 +6,7 @@ const Navigation = () => {
     return (
         <div className="nav-container">
             <ol className="nav-list">
-                <li className="nav-list-link active">
+                <li className="nav-list-link current">
                     <a href="#first-products">
                         <sup>01</sup>
                         <strong>First</strong>
