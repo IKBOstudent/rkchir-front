@@ -10,7 +10,7 @@ const MobileHeader = () => {
             <ul className="header-bar">
                 <li className="header-bar__item logo">
                     <Link to="/">
-                        <span>RKCHIR</span>
+                        <span>PC_PARTS</span>
                     </Link>
                 </li>
 

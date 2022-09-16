@@ -9,7 +9,7 @@ const DesktopHeader = () => {
             <ul className="header-bar">
                 <li className="header-bar__item logo">
                     <Link to="/">
-                        <span>RKCHIR</span>
+                        <span>PC_PARTS</span>
                     </Link>
                 </li>
                 <li className="header-bar__item">
@@ -22,6 +22,13 @@ const DesktopHeader = () => {
                         <span>Catalog</span>
                     </Link>
                 </li>
+
+                <li className="header-bar__item">
+                    <Link to="/">
+                        <span>Configure</span>
+                    </Link>
+                </li>
+
                 <li className="header-bar__item search">
                     <SearchButton />
                 </li>
