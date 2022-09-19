@@ -1,0 +1,30 @@
+@import "@styles/variables";
+
+.builds-card {
+    &-box {
+        padding: 2rem;
+        grid-column: span 4;
+
+        a {
+            color: $color-default;
+
+            h3 {
+                margin: 0.5rem 0;
+            }
+
+            p {
+                margin-top: 0.7rem;
+                padding-top: 1rem;
+                border-top: 1px solid $color-default-light;
+            }
+        }
+
+        @media only screen and (max-width: 991px) {
+            grid-column: span 6;
+        }
+
+        @media only screen and (max-width: 767px) {
+            grid-column: span 12;
+        }
+    }
+}

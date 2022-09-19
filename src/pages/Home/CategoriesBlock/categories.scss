@@ -1,0 +1,37 @@
+@import "@styles/variables";
+
+.categories {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        scroll-margin: 7rem;
+    }
+
+    &-menu {
+        width: 30%;
+
+        border: solid 1px $color-default;
+
+        transform: translate(4px, -4px);
+        box-shadow: -8px 8px 0 $color-default;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-item {
+            padding: 1rem;
+            a {
+                color: $color-default;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $color-primary-transparent;
+            }
+        }
+    }
+}
