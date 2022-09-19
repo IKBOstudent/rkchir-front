@@ -1,17 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import './footer.scss';
+import "./footer.scss";
 
 const Footer = () => {
     return (
-        <div className="footer-wrapper">
-            <div className="footer-container">
-                <div className="footer-mainSection">
+        <footer>
+            <article className="footer-container">
+                <section className="footer-mainSection">
                     <div className="footer-mainSection-left">
                         <h3>FOOTER CONTENT LEFT</h3>
-                        <h4>SOCIAL</h4>
+                        <h4>
+                            <u>SOCIAL</u>
+                        </h4>
+
                         <ul>
-                            <li>First</li>
+                            <li>
+                                <abbr title="Common Gateway Interface, общий шлюзовый интерфейс">CGI</abbr>
+                            </li>
                             <li>Second</li>
                             <li>Third</li>
                         </ul>
@@ -37,9 +42,9 @@ const Footer = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="footer-groundSection">
+                <section className="footer-groundSection">
                     <div className="footer-groundSection-policy">
                         <ul>
                             <li>
@@ -56,9 +61,9 @@ const Footer = () => {
                     <div className="footer-groundSection-made">
                         <span>Made by IKBOstudent © 2022 </span>
                     </div>
-                </div>
-            </div>
-        </div>
+                </section>
+            </article>
+        </footer>
     );
 };
 

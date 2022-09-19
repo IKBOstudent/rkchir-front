@@ -1,17 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
 
-import SearchButton from './Items/search-button';
-import SavedButton from './Items/saved-button';
+import SearchButton from "./Icons/search-button";
+import SavedButton from "./Icons/saved-button";
 
 const MobileHeader = () => {
     return (
         <div className="mobile-header">
             <ul className="header-bar">
                 <li className="header-bar__item logo">
-                    <Link to="/">
+                    <a href="/">
                         <span>PC_PARTS</span>
-                    </Link>
+                    </a>
                 </li>
 
                 <li className="header-bar__item search">
@@ -29,7 +28,8 @@ const MobileHeader = () => {
                             fill="none"
                             role="img"
                             aria-hidden="true"
-                            strokeWidth="1.5">
+                            strokeWidth="1.5"
+                        >
                             <title>Menu Icon</title>
                             <path d="M2.25 18.003h19.5m-19.5-6h19.5m-19.5-6h19.5"></path>
                         </svg>

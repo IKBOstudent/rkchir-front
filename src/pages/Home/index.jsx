@@ -1,28 +1,34 @@
-import React from 'react';
+import React from "react";
 
-import './home.scss';
+import "./home.scss";
 
-import Header from '@components/Header';
-import Footer from '@components/Footer';
-import Navigation from './Navigation';
-import ProductsBlock from './ProductsBlock';
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import Navigation from "./Navigation";
+
+import BuildsBlock from "./BuildsBlock";
+import CategoriesBlock from "./CategoriesBlock";
+import ProductsBlock from "./ProductsBlock";
 
 const Home = () => {
     return (
-        <div>
+        <>
             <Header />
-            <div className="home-wrapper">
-                <div className="home-container">
-                    <div className="home-sideBox">
+            <main>
+                <article className="home-container">
+                    <section className="home-nav">
                         <Navigation />
-                    </div>
-                    <div className="home-mainBox">
+                    </section>
+
+                    <section className="home-content">
+                        <BuildsBlock />
+                        <CategoriesBlock />
                         <ProductsBlock />
-                    </div>
-                </div>
-            </div>
+                    </section>
+                </article>
+            </main>
             <Footer />
-        </div>
+        </>
     );
 };
 

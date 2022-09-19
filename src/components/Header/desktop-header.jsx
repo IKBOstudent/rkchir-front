@@ -1,32 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SavedButton from './Items/saved-button';
-import SearchButton from './Items/search-button';
+import React from "react";
+import SavedButton from "./Icons/saved-button";
+import SearchButton from "./Icons/search-button";
 
 const DesktopHeader = () => {
     return (
         <div className="desktop-header">
             <ul className="header-bar">
                 <li className="header-bar__item logo">
-                    <Link to="/">
+                    <a href="/">
                         <span>PC_PARTS</span>
-                    </Link>
+                    </a>
                 </li>
                 <li className="header-bar__item">
-                    <Link to="/">
+                    <a href="/">
                         <span>Home</span>
-                    </Link>
+                    </a>
                 </li>
                 <li className="header-bar__item">
-                    <Link to="/">
+                    <a href="/">
                         <span>Catalog</span>
-                    </Link>
+                    </a>
                 </li>
 
                 <li className="header-bar__item">
-                    <Link to="/">
+                    <a href="/">
                         <span>Configure</span>
-                    </Link>
+                    </a>
                 </li>
 
                 <li className="header-bar__item search">

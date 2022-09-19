@@ -1,11 +1,10 @@
-@import '@styles/variables';
+@import "@styles/variables";
+
+footer {
+    border-top: 1px solid $color-default;
+}
 
 .footer {
-    &-wrapper {
-        width: 100%;
-        border-top: 1px solid $color-default;
-    }
-
     &-container {
         max-width: 1440px;
         padding: 0 6rem;
@@ -15,8 +14,9 @@
     &-mainSection {
         display: flex;
         flex-direction: row;
-        padding: 2rem 0;
         align-items: start;
+
+        padding: 2rem 0;
 
         &-left,
         &-right {
@@ -24,23 +24,18 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 2rem;
+
             color: $color-default;
 
             h3,
             h4 {
-                margin: 0;
-                padding: 0;
                 font-weight: 500;
             }
 
             ul {
-                margin: 0;
-                padding: 0;
-                list-style: none;
                 li {
                     a {
                         color: $color-default;
-                        text-decoration: none;
                         &:hover {
                             color: $color-primary;
                             text-decoration: underline;
@@ -90,9 +85,6 @@
 
         &-policy {
             ul {
-                margin: 0;
-                padding: 0;
-                list-style: none;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
@@ -101,11 +93,10 @@
                 li {
                     a {
                         color: $color-default;
-                        text-decoration: none;
                         font-weight: 500;
                     }
                     &:not(:last-of-type)::after {
-                        content: '|';
+                        content: "|";
                         font-weight: 500;
                         margin: 0 0.5rem;
                         font-size: 1rem;
@@ -121,7 +112,6 @@
         }
 
         &-made {
-            padding: 0;
             display: flex;
             color: $color-default;
             justify-content: center;
