@@ -1,13 +1,25 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 
-import "@styles/global.scss";
+import '@styles/global.scss';
 
-import Home from "@pages/Home";
+import Home from '@pages/Home';
+import Cart from '@pages/Cart';
+import Catalog from '@pages/Catalog';
+import Configure from '@pages/Configure';
+import CalculatorBottleneck from '@pages/Calculators/Bottleneck';
+import CalculatorPSU from '@pages/Calculators/PSU';
+
+// origin, pc-builds
 
 const App = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/catalog" element={<Catalog />} />
+            <Route path="/configure" element={<Configure />} />
+            <Route path="/calculator-bottleneck" element={<CalculatorBottleneck />} />
+            <Route path="/calculator-psu" element={<CalculatorPSU />} />
+            <Route path="/cart" element={<Cart />} />
         </Routes>
     );
 };

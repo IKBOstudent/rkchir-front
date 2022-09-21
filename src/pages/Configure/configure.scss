@@ -1,0 +1,70 @@
+@import '@styles/variables';
+
+main {
+    z-index: 1;
+}
+
+.configure {
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 3rem;
+
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 2rem 6rem;
+
+        nav {
+            position: sticky;
+            top: 7rem;
+
+            align-self: flex-start;
+            grid-column: span 3;
+        }
+    }
+
+    &-list {
+        position: sticky;
+        top: 7rem;
+
+        align-self: flex-start;
+        grid-column: 4 / span 2;
+
+        transform: translate(4px, -4px);
+        box-shadow: -8px 8px 0 $color-default;
+        border: 1px solid $color-default;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            padding: 1rem;
+
+            li {
+                a {
+                    color: $color-default;
+                    font-size: $font-size-large;
+                    font-weight: $font-weight-bold;
+                }
+            }
+        }
+    }
+
+    &-items {
+        grid-column: 6 / span 7;
+    }
+
+    @media only screen and (max-width: 991px) {
+        &-container {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        &-container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}

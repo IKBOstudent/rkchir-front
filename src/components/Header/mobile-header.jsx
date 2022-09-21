@@ -1,39 +1,28 @@
-import React from "react";
+import React from 'react';
 
-import SearchButton from "./Icons/search-button";
-import SavedButton from "./Icons/saved-button";
+import SearchButton from './Icons/search-button';
+import SavedButton from './Icons/saved-button';
+import MenuButton from './Icons/menu-button';
 
 const MobileHeader = () => {
     return (
         <div className="mobile-header">
             <ul className="header-bar">
-                <li className="header-bar__item logo">
-                    <a href="/">
+                <li className="header-bar__item header-bar__item-logo">
+                    <a href="/" className="header-bar__item-link">
                         <span>PC_PARTS</span>
                     </a>
                 </li>
 
-                <li className="header-bar__item search">
+                <li className="header-bar__item header-bar__item-icon header-search">
                     <SearchButton />
                 </li>
-                <li className="header-bar__item">
+                <li className="header-bar__item header-bar__item-icon">
                     <SavedButton />
                 </li>
 
-                <li className="header-bar__item">
-                    <button type="button" className="button-icon">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            role="img"
-                            aria-hidden="true"
-                            strokeWidth="1.5"
-                        >
-                            <title>Menu Icon</title>
-                            <path d="M2.25 18.003h19.5m-19.5-6h19.5m-19.5-6h19.5"></path>
-                        </svg>
-                    </button>
+                <li className="header-bar__item header-bar__item-icon">
+                    <MenuButton />
                 </li>
             </ul>
         </div>

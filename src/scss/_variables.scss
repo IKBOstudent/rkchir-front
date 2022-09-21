@@ -3,9 +3,23 @@ $color-white: #ffffff;
 $color-default: #0b091c;
 $color-default-light: #86868680;
 
+$color-secondary: #707382;
+
 $color-primary: #5026c4;
 $color-primary-hover: #664ce6;
-$color-primary-active: #2e1b8f;
+$color-primary-active: #3c2997;
 $color-primary-transparent: #6733f510;
 
+// ----------------------------------------------
+
 $standard-transition: all 200ms ease;
+
+// ----------------------------------------------
+
+$font-size-small: 0.9rem;
+$font-size-medium: 1rem;
+$font-size-large: 1.2rem;
+
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;

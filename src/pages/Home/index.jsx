@@ -1,14 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import "./home.scss";
+import './home.scss';
 
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import Navigation from "./Navigation";
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
-import BuildsBlock from "./BuildsBlock";
-import CategoriesBlock from "./CategoriesBlock";
-import ProductsBlock from "./ProductsBlock";
+import BuildsBlock from './BuildsBlock';
+import CategoriesBlock from './CategoriesBlock';
 
 const Home = () => {
     return (
@@ -16,14 +14,11 @@ const Home = () => {
             <Header />
             <main>
                 <article className="home-container">
-                    <section className="home-nav">
-                        <Navigation />
-                    </section>
-
-                    <section className="home-content">
+                    <section className="home-builds">
                         <BuildsBlock />
+                    </section>
+                    <section className="home-categories">
                         <CategoriesBlock />
-                        <ProductsBlock />
                     </section>
                 </article>
             </main>

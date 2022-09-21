@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .nav {
     &-container {
@@ -25,10 +25,10 @@
                 color: $color-default;
 
                 sup {
-                    font-size: small;
+                    font-size: $font-size-small;
                 }
                 strong {
-                    font-size: large;
+                    font-size: $font-size-large;
                 }
             }
 

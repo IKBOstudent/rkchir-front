@@ -1,0 +1,58 @@
+.catalog {
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        column-gap: 2rem;
+
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 2rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    &-filters {
+        grid-column: span 1;
+        align-self: start;
+        position: sticky;
+        top: 5rem;
+        padding-top: 2rem;
+
+        z-index: 2;
+    }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+
+        grid-column: 2 / span 4;
+        position: relative;
+        padding-top: 2rem;
+    }
+
+    @media only screen and (max-width: 1199px) {
+        &-filters {
+            display: none;
+        }
+
+        &-content {
+            grid-column: span 4;
+        }
+    }
+
+    @media only screen and (max-width: 991px) {
+        &-container {
+            padding-left: 4rem;
+            padding-right: 4rem;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        &-container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+}

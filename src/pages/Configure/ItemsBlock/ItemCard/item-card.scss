@@ -1,0 +1,18 @@
+@import '@styles/variables';
+
+.item {
+    &-card {
+        padding: 2rem;
+        grid-column: span 1;
+        height: 300px;
+
+        a {
+            display: grid;
+            color: $color-default;
+        }
+
+        @media only screen and (max-width: 767px) {
+            grid-column: span 2;
+        }
+    }
+}

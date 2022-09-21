@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 header {
     display: block;
@@ -27,56 +27,139 @@ header {
         flex-direction: row;
 
         width: 100%;
-        height: 100%;
+        // height: 100%;
 
         &__item {
             margin: 0 0.5rem;
             transition: $standard-transition;
 
-            a {
-                background: none;
+            &-link {
+                display: inline-flex;
                 color: $color-default;
-                font-weight: 500;
-                font-size: larger;
+                font-weight: $font-weight-medium;
+                font-size: $font-size-large;
                 font-family: inherit;
                 line-height: 1.5;
-                border: none;
                 padding: 0.5rem 0;
-            }
 
-            button {
-                svg {
-                    width: 24px;
-                    stroke: $color-default;
+                &:hover {
+                    cursor: pointer;
+                    color: $color-primary;
+
+                    svg {
+                        fill: $color-primary;
+                    }
                 }
             }
 
-            &.logo {
+            &-logo {
                 margin-left: 0;
                 a {
-                    font-weight: 900;
+                    font-weight: $font-weight-black;
                 }
             }
 
-            &.search {
-                margin-left: auto;
+            &-icon {
+                &.header-search {
+                    margin-left: auto;
+                }
+
+                button {
+                    svg {
+                        width: 24px;
+                        stroke: $color-default;
+                    }
+
+                    &:hover {
+                        svg {
+                            stroke: $color-primary;
+                        }
+                    }
+                }
             }
 
             &:last-of-type {
                 margin-right: 0;
             }
 
-            &:hover {
-                cursor: pointer;
-
-                padding: auto;
-                a {
-                    color: $color-primary;
-                }
-
+            &-calc {
                 button {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 0.4rem;
+
                     svg {
-                        stroke: $color-primary;
+                        padding-top: 2px;
+                        width: 12px;
+                        height: 12px;
+                        fill: $color-default;
+                    }
+                }
+            }
+
+            &-icon-menu,
+            &-calc-menu {
+                display: none;
+                position: absolute;
+                top: 4rem;
+
+                background-color: $color-white;
+                border: 1px solid $color-default;
+                border-radius: 2px;
+            }
+
+            &-icon-menu {
+                translate: calc(-100% + 40px);
+                padding: 1rem;
+
+                &-content {
+                    width: max-content;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 2rem;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        row-gap: 1rem;
+
+                        span {
+                            color: $color-default;
+                            font-weight: $font-weight-bold;
+                        }
+                    }
+                }
+            }
+
+            &-calc-menu {
+                padding: 1rem;
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    row-gap: 1rem;
+
+                    li > a {
+                        display: flex;
+                        flex-direction: column;
+
+                        span {
+                            color: $color-default;
+                            font-weight: $font-weight-bold;
+                        }
+
+                        small {
+                            color: $color-secondary;
+                            font-size: $font-size-small;
+                        }
+
+                        &:hover {
+                            span {
+                                color: $color-primary;
+                            }
+                        }
                     }
                 }
             }

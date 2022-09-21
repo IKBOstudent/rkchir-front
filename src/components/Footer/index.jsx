@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./footer.scss";
+import './footer.scss';
 
 const Footer = () => {
     return (
@@ -9,14 +9,10 @@ const Footer = () => {
                 <section className="footer-mainSection">
                     <div className="footer-mainSection-left">
                         <h3>FOOTER CONTENT LEFT</h3>
-                        <h4>
-                            <u>SOCIAL</u>
-                        </h4>
+                        <h4>SOCIAL</h4>
 
                         <ul>
-                            <li>
-                                <abbr title="Common Gateway Interface, общий шлюзовый интерфейс">CGI</abbr>
-                            </li>
+                            <li>First</li>
                             <li>Second</li>
                             <li>Third</li>
                         </ul>
@@ -58,9 +54,9 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="footer-groundSection-made">
+                    <aside className="footer-groundSection-made">
                         <span>Made by IKBOstudent © 2022 </span>
-                    </div>
+                    </aside>
                 </section>
             </article>
         </footer>
