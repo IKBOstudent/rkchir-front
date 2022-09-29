@@ -1,10 +1,12 @@
 import React from 'react';
+
 import CalculatorsDropdown from './Dropdowns/CalculatorsDropdown';
 import SavedDropdown from './Dropdowns/SavedDropdown';
 import SearchDropdown from './Dropdowns/SearchDropdown';
 
-import SavedButton from './Icons/saved-button';
-import SearchButton from './Icons/search-button';
+import SavedButton from './Buttons/saved-button';
+import SearchButton from './Buttons/search-button';
+import CalculatorsButton from './Buttons/calculators-button';
 
 const DesktopHeader = () => {
     return (
@@ -33,20 +35,7 @@ const DesktopHeader = () => {
                 </li>
 
                 <li className="header-bar__item header-bar__item-calc">
-                    <button type="button" className="header-bar__item-link">
-                        <span>Calculators</span>
-                        <svg
-                            viewBox="0 0 8 8"
-                            xmlns="http://www.w3.org/2000/svg"
-                            role="img"
-                            aria-hidden="true"
-                            aria-label="dropdown">
-                            <title>Arrow Icon</title>
-
-                            <path d="M7.066 1.5L4 6.099.934 1.5h6.132z"></path>
-                        </svg>
-                    </button>
-
+                    <CalculatorsButton />
                     <CalculatorsDropdown />
                 </li>
 

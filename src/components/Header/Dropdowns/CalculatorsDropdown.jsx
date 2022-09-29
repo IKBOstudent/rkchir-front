@@ -2,7 +2,7 @@ import React from 'react';
 
 const CalculatorsDropdown = () => {
     return (
-        <div aria-hidden="false" className="header-bar__item-calc-menu">
+        <div id="CalculatorsMenu" aria-hidden="false" className="header-bar__item-calc-menu">
             <ul>
                 <li>
                     <a href="/calculator-bottleneck">

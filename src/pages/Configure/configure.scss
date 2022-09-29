@@ -7,7 +7,7 @@ main {
 .configure {
     &-container {
         display: grid;
-        grid-template-columns: repeat(12, minmax(0, 1fr));
+        grid-template-columns: 1fr 2fr;
         gap: 3rem;
 
         max-width: 1440px;
@@ -19,39 +19,13 @@ main {
             top: 7rem;
 
             align-self: flex-start;
-            grid-column: span 3;
-        }
-    }
-
-    &-list {
-        position: sticky;
-        top: 7rem;
-
-        align-self: flex-start;
-        grid-column: 4 / span 2;
-
-        transform: translate(4px, -4px);
-        box-shadow: -8px 8px 0 $color-default;
-        border: 1px solid $color-default;
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            row-gap: 1rem;
-            padding: 1rem;
-
-            li {
-                a {
-                    color: $color-default;
-                    font-size: $font-size-large;
-                    font-weight: $font-weight-bold;
-                }
-            }
+            grid-column: span 1;
+            transition: $standard-transition;
         }
     }
 
     &-items {
-        grid-column: 6 / span 7;
+        grid-column: 2 / span 1;
     }
 
     @media only screen and (max-width: 991px) {

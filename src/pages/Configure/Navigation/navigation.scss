@@ -1,49 +1,75 @@
 @import '@styles/variables';
 
-.nav {
+.configure-nav {
     &-container {
         background-color: $color-white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    &-list {
-        display: flex;
-        flex-direction: column;
+    &-first {
+        &-list {
+            display: flex;
+            flex-direction: column;
 
-        &-link {
-            width: 100%;
+            li {
+                width: 100%;
 
-            transition: $standard-transition;
-
-            a {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                row-gap: 0.3rem;
-
-                padding: 1rem;
-
-                color: $color-default;
-
-                sup {
-                    font-size: $font-size-small;
-                }
-                strong {
-                    font-size: $font-size-large;
-                }
-            }
-
-            &.current {
-                border-right: 2px solid $color-primary;
-                background-color: $color-primary-transparent;
+                transition: $standard-transition;
 
                 a {
-                    color: $color-primary;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    row-gap: 0.3rem;
+
+                    padding: 1rem;
+
+                    color: $color-default;
+
+                    sup {
+                        font-size: $font-size-small;
+                    }
+                    strong {
+                        font-size: $font-size-large;
+                    }
+                }
+
+                &.current {
+                    border-right: 2px solid $color-primary;
+                    background-color: $color-primary-transparent;
+
+                    a {
+                        color: $color-primary;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $color-primary-transparent;
                 }
             }
+        }
+    }
 
-            &:hover {
-                cursor: pointer;
-                background-color: $color-primary-transparent;
+    &-second {
+        transform: translate(4px, -4px);
+        box-shadow: -8px 8px 0 $color-default;
+        border: 1px solid $color-default;
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            padding: 1rem;
+
+            li {
+                a {
+                    color: $color-default;
+                    font-size: $font-size-large;
+                    font-weight: $font-weight-bold;
+                }
             }
         }
     }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './calculator-bottleneck.scss';
+
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
@@ -8,7 +10,9 @@ const CalculatorBottleneck = () => {
         <>
             <Header />
             <main>
-                <article className="cart-container">Bottleneck</article>
+                <article className="calc-bottleneck-container">
+                    <section>Bottlenck</section>
+                </article>
             </main>
             <Footer />
         </>

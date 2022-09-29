@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './calculator-psu.scss';
+
 import Header from '@components/Header';
 import Footer from '@components/Footer';
 
@@ -8,7 +10,9 @@ const CalculatorPSU = () => {
         <>
             <Header />
             <main>
-                <article className="cart-container">PSU</article>
+                <article className="calc-psu-container">
+                    <section>PSU</section>
+                </article>
             </main>
             <Footer />
         </>
