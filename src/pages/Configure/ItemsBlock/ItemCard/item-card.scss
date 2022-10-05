@@ -1,18 +1,22 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .item {
     &-card {
         padding: 2rem;
-        grid-column: span 1;
-        height: 300px;
+        grid-column: span 4;
+        height: 250px;
 
         a {
             display: grid;
             color: $color-default;
         }
 
+        @media only screen and (max-width: 1199px) {
+            grid-column: span 6;
+        }
+
         @media only screen and (max-width: 767px) {
-            grid-column: span 2;
+            grid-column: span 12;
         }
     }
 }

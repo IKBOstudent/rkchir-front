@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import CalculatorsDropdown from './Dropdowns/CalculatorsDropdown';
-import SavedDropdown from './Dropdowns/SavedDropdown';
-import SearchDropdown from './Dropdowns/SearchDropdown';
+import CalculatorsDropdown from "./Dropdowns/CalculatorsDropdown";
+import SavedDropdown from "./Dropdowns/SavedDropdown";
+import SearchDropdown from "./Dropdowns/SearchDropdown";
 
-import SavedButton from './Buttons/saved-button';
-import SearchButton from './Buttons/search-button';
-import CalculatorsButton from './Buttons/calculators-button';
+import SavedButton from "./Buttons/saved-button";
+import SearchButton from "./Buttons/search-button";
+import CalculatorsButton from "./Buttons/calculators-button";
 
 const DesktopHeader = () => {
     return (
@@ -49,9 +49,11 @@ const DesktopHeader = () => {
                 </li>
 
                 <li className="header-bar__item">
-                    <button type="button" className="button-default">
-                        <span>Sign up</span>
-                    </button>
+                    <a href="/register">
+                        <button type="button" className="button-default">
+                            <span>Sign up</span>
+                        </button>
+                    </a>
                 </li>
             </ul>
         </div>

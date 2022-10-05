@@ -1,0 +1,35 @@
+@import "@styles/variables";
+
+.configure-menu {
+    &-container {
+        border: 1px solid $color-default;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+
+        &-item {
+            display: none;
+            padding: 1rem;
+            padding-right: 3rem;
+            a {
+                color: $color-default;
+                font-size: $font-size-large;
+                font-weight: $font-weight-bold;
+            }
+            &-active {
+                display: block;
+            }
+
+            &:last-of-type {
+                width: fit-content;
+                transform: translate(4px, -4px);
+                box-shadow: -8px 8px 0 $color-default;
+
+                padding: 1rem;
+                display: block;
+            }
+        }
+    }
+}

@@ -1,75 +1,45 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .configure-nav {
-    &-container {
-        background-color: $color-white;
+    &-list {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-    }
 
-    &-first {
-        &-list {
-            display: flex;
-            flex-direction: column;
+        li {
+            width: 100%;
 
-            li {
-                width: 100%;
+            transition: $standard-transition;
 
-                transition: $standard-transition;
+            a {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                row-gap: 0.3rem;
 
-                a {
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                    row-gap: 0.3rem;
+                padding: 1rem;
 
-                    padding: 1rem;
+                color: $color-default;
 
-                    color: $color-default;
-
-                    sup {
-                        font-size: $font-size-small;
-                    }
-                    strong {
-                        font-size: $font-size-large;
-                    }
+                sup {
+                    font-size: $font-size-small;
                 }
-
-                &.current {
-                    border-right: 2px solid $color-primary;
-                    background-color: $color-primary-transparent;
-
-                    a {
-                        color: $color-primary;
-                    }
-                }
-
-                &:hover {
-                    cursor: pointer;
-                    background-color: $color-primary-transparent;
+                strong {
+                    font-size: $font-size-large;
                 }
             }
-        }
-    }
 
-    &-second {
-        transform: translate(4px, -4px);
-        box-shadow: -8px 8px 0 $color-default;
-        border: 1px solid $color-default;
+            &.current {
+                box-shadow: 0 2px 0 0 $color-primary;
+                background-color: $color-primary-transparent;
 
-        &-list {
-            display: flex;
-            flex-direction: column;
-            row-gap: 1rem;
-            padding: 1rem;
-
-            li {
                 a {
-                    color: $color-default;
-                    font-size: $font-size-large;
-                    font-weight: $font-weight-bold;
+                    color: $color-primary;
                 }
+            }
+
+            &:hover {
+                cursor: pointer;
+                background-color: $color-primary-transparent;
             }
         }
     }

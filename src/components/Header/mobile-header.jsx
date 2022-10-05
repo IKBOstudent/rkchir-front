@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import SearchButton from './Icons/search-button';
-import SavedButton from './Icons/saved-button';
-import MenuButton from './Icons/menu-button';
+import SearchButton from "./Buttons/search-button";
+import SavedButton from "./Buttons/saved-button";
+import MenuButton from "./Buttons/menu-button";
 
 const MobileHeader = () => {
     return (

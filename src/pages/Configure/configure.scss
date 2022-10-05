@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 main {
     z-index: 1;
@@ -6,26 +6,44 @@ main {
 
 .configure {
     &-container {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        gap: 3rem;
-
+        margin-top: 2rem;
         max-width: 1440px;
         margin: 0 auto;
-        padding: 2rem 6rem;
+        padding: 0 6rem;
+        padding-bottom: 2rem;
+    }
 
-        nav {
+    &-nav {
+        background-color: $color-white;
+
+        z-index: 2;
+        align-self: flex-start;
+        grid-column: span 1;
+        transition: $standard-transition;
+    }
+
+    &-content {
+        margin-top: 2rem;
+
+        padding: 0 1rem;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 3rem;
+
+        &-menu {
             position: sticky;
             top: 7rem;
+            background-color: $color-white;
 
+            z-index: 2;
             align-self: flex-start;
             grid-column: span 1;
             transition: $standard-transition;
         }
-    }
 
-    &-items {
-        grid-column: 2 / span 1;
+        &-items {
+        }
     }
 
     @media only screen and (max-width: 991px) {

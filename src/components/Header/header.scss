@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 header {
     display: block;
@@ -103,7 +103,7 @@ header {
                 position: absolute;
                 top: 4rem;
                 background-color: $color-white;
-                border: 1px solid $color-default;
+                box-shadow: 0 0 16px 4px $color-default-transparent;
                 border-radius: 2px;
                 transition: $standard-transition;
             }
