@@ -14,6 +14,16 @@ const Home = () => {
             <Header />
             <main>
                 <article className="home-container">
+                    <iframe
+                        autoplay
+                        height="400"
+                        // src="https://www.example.com/"
+                        src="https://www.youtube.com/embed/nNiA1zLuvuw?autoplay=0&origin=http://example.com&controls=0&rel=1`"
+                        allow="autoplay; encrypted-media"
+                        allowfullscreen
+                        title="video"
+                        frameborder="0"></iframe>
+
                     <section className="home-builds">
                         <BuildsBlock />
                     </section>

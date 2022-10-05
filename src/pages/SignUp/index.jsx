@@ -10,10 +10,48 @@ const SignUp = () => {
             </section>
             <section>
                 <form className="signup-form">
-                    <input type="text" className="form-name" />
-                    <input type="email" className="form-email" />
-                    <input type="password" className="form-password" />
-                    <input type="checkbox" className="form-checkbox" />
+                    <div className="signup-form-input">
+                        <input
+                            id="signup-text"
+                            type="text"
+                            className="form-name"
+                            placeholder="Ivan"
+                            required
+                        />
+                        <label htmlFor="#signup-text">Name</label>
+                    </div>
+
+                    <div className="signup-form-input">
+                        <input
+                            id="signup-email"
+                            type="email"
+                            className="form-email"
+                            placeholder="ivan@gmail.com"
+                            required
+                        />
+                        <label htmlFor="#signup-text">Email</label>
+                    </div>
+
+                    <div className="signup-form-input">
+                        <input
+                            id="signup-password"
+                            type="password"
+                            className="form-password"
+                            required
+                        />
+                        <label htmlFor="#signup-text">Password</label>
+                    </div>
+
+                    <label htmlFor="#signup-text">
+                        Remember me
+                        <input
+                            id="signup-checkbox"
+                            type="checkbox"
+                            className="form-checkbox"
+                            value="check"
+                        />
+                    </label>
+
                     <button type="submit" className="button-default">
                         Sign Up
                     </button>
