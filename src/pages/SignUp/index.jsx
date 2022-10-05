@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./signup.scss";
+import './signup.scss';
 
 const SignUp = () => {
     return (
@@ -10,17 +10,17 @@ const SignUp = () => {
             </section>
             <section>
                 <form className="signup-form">
-                    <input type="text" />
-                    <input type="email" />
-                    <input type="password" />
-                    <input type="checkbox" />
+                    <input type="text" className="form-name" />
+                    <input type="email" className="form-email" />
+                    <input type="password" className="form-password" />
+                    <input type="checkbox" className="form-checkbox" />
                     <button type="submit" className="button-default">
                         Sign Up
                     </button>
                 </form>
             </section>
             <section>
-                <span>Made by IKBOstudent © 2022 </span>
+                <span>By signing up, you agree to our Terms of Use and Privacy Policy.</span>
             </section>
         </main>
     );

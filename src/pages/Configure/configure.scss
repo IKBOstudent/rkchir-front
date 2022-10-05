@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 main {
     z-index: 1;
@@ -15,34 +15,31 @@ main {
 
     &-nav {
         background-color: $color-white;
+    }
 
-        z-index: 2;
-        align-self: flex-start;
-        grid-column: span 1;
-        transition: $standard-transition;
+    &-menu {
+        margin-top: 2rem;
+        padding: 0 1rem;
+
+        background-color: $color-white;
     }
 
     &-content {
-        margin-top: 2rem;
+        margin-top: 1rem;
 
         padding: 0 1rem;
         z-index: 1;
         display: grid;
-        grid-template-columns: 1fr 4fr;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 3rem;
 
-        &-menu {
-            position: sticky;
-            top: 7rem;
+        &-filters {
             background-color: $color-white;
-
-            z-index: 2;
-            align-self: flex-start;
             grid-column: span 1;
-            transition: $standard-transition;
         }
 
         &-items {
+            grid-column: 2 / span 3;
         }
     }
 
@@ -50,6 +47,16 @@ main {
         &-container {
             padding-left: 4rem;
             padding-right: 4rem;
+        }
+
+        &-content {
+            &-items {
+                grid-column: span 4;
+            }
+
+            &-filters {
+                display: none;
+            }
         }
     }
 

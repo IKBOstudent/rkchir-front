@@ -11,9 +11,19 @@ const ItemsBlock = () => {
                 <ItemCard />
                 <ItemCard />
                 <ItemCard />
+
                 <ItemCard />
                 <ItemCard />
                 <ItemCard />
+
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+
+                <ItemCard />
+                <ItemCard />
+                <ItemCard />
+
                 <ItemCard />
                 <ItemCard />
             </div>

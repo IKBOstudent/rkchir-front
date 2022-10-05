@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .signup {
     &-container {
@@ -10,6 +10,7 @@
         max-width: 300px;
         margin: 0 auto;
         padding: 10rem 6rem;
+        margin-top: 10vh;
     }
 
     &-title {
@@ -24,16 +25,22 @@
         gap: 1rem;
 
         input {
+            height: 3rem;
             border-radius: 2px;
             border: 1px solid $color-default;
-            padding: 0.7rem;
 
             transition: $standard-transition;
 
             &:hover,
             &:focus-visible {
                 outline-color: $color-primary;
+                outline-width: 1px;
             }
+        }
+
+        .form-checkbox {
+            height: fit-content;
+            align-self: flex-start;
         }
     }
 
