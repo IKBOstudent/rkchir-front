@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const SavedButton = () => {
     return (
@@ -9,7 +9,9 @@ const SavedButton = () => {
                 fill="none"
                 role="img"
                 aria-hidden="true"
-                strokeWidth="1.5">
+                strokeWidth="1.5"
+                width="24"
+            >
                 <title>Saved Icon</title>
 
                 <path d="M7 4V2.31c0-.347.134-.68.373-.926.238-.246.562-.384.9-.384h11.454c.338 0 .662.138.9.384.239.246.373.579.373.926V20"></path>

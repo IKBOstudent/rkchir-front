@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./header.scss";
-import MobileHeader from "./mobile-header";
+import MobileHeader from "./Mobile/mobile-header";
 import DesktopHeader from "./desktop-header";
 
 const Header = () => {

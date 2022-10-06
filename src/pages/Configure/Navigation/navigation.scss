@@ -4,10 +4,11 @@
     &-list {
         display: flex;
         flex-direction: row;
+        overflow-x: hidden;
 
         li {
             width: 100%;
-
+            min-width: 10rem;
             transition: $standard-transition;
 
             a {

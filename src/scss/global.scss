@@ -1,8 +1,9 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 body {
-    font-family: 'Satoshi', sans-serif;
+    font-family: "Satoshi", sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 a,
@@ -68,9 +69,17 @@ button {
 
         transition: $standard-transition;
 
+        svg {
+            stroke: $color-default;
+        }
+
         &:hover {
             cursor: pointer;
             background-color: $color-primary-transparent;
+
+            svg {
+                stroke: $color-primary;
+            }
         }
     }
 }

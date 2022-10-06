@@ -3,7 +3,7 @@
 .builds-card {
     &-box {
         padding: 2rem;
-        grid-column: span 4;
+        grid-column: span 2;
 
         a {
             color: $color-default;
@@ -20,11 +20,11 @@
         }
 
         @media only screen and (max-width: 991px) {
-            grid-column: span 6;
+            grid-column: span 3;
         }
 
         @media only screen and (max-width: 767px) {
-            grid-column: span 12;
+            grid-column: span 6;
         }
     }
 }

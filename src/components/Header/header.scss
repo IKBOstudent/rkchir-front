@@ -12,22 +12,29 @@ header {
 
 .header {
     &-container {
-        align-items: center;
         display: flex;
+        align-items: center;
 
         height: 5rem;
         max-width: 1440px;
         padding: 0 6rem;
         margin: 0 auto;
+
+        @media only screen and (max-width: 991px) {
+            padding: 0 4rem;
+        }
+
+        @media only screen and (max-width: 767px) {
+            padding: 0 2rem;
+        }
     }
 
     &-bar {
-        align-items: center;
         display: flex;
         flex-direction: row;
+        align-items: center;
 
         width: 100%;
-        // height: 100%;
 
         &__item {
             margin: 0 0.5rem;
@@ -35,12 +42,13 @@ header {
 
             &-link {
                 display: inline-flex;
+                padding: 0.5rem 0;
+
                 color: $color-default;
                 font-weight: $font-weight-medium;
                 font-size: $font-size-large;
                 font-family: inherit;
                 line-height: 1.5;
-                padding: 0.5rem 0;
 
                 &:hover {
                     cursor: pointer;
@@ -52,33 +60,19 @@ header {
                 }
             }
 
-            &-logo {
+            &.header-logo {
                 margin-left: 0;
                 a {
                     font-weight: $font-weight-black;
                 }
             }
 
-            &-icon {
-                &.header-search {
-                    margin-left: auto;
-                }
-
-                button {
-                    svg {
-                        width: 24px;
-                        stroke: $color-default;
-                    }
-
-                    &:hover {
-                        svg {
-                            stroke: $color-primary;
-                        }
-                    }
-                }
+            &.header-search {
+                margin-left: auto;
             }
 
-            &:last-of-type {
+            &.header-menu,
+            &.header-register {
                 margin-right: 0;
             }
 
@@ -90,8 +84,6 @@ header {
 
                     svg {
                         padding-top: 2px;
-                        width: 12px;
-                        height: 12px;
                         fill: $color-default;
                     }
                 }
@@ -166,16 +158,8 @@ header {
         }
     }
 
-    @media only screen and (max-width: 991px) {
-        &-container {
-            padding: 0 4rem;
-        }
-    }
-
-    @media only screen and (max-width: 767px) {
-        &-container {
-            padding: 0 2rem;
-        }
+    &-menu {
+        position: relative;
     }
 }
 

@@ -1,0 +1,55 @@
+@import "@styles/variables";
+
+.mobile-header {
+    &-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 200px;
+        z-index: 100;
+        padding: 2rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        background-color: #fff;
+        transition: $standard-transition;
+        // transform: translateX(100%);
+
+        &-top {
+            button {
+                stroke: $color-default;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding-left: 0.5rem;
+
+            li a {
+                color: $color-default;
+                font-size: $font-size-medium;
+                font-weight: $font-weight-medium;
+
+                display: flex;
+                flex-wrap: wrap;
+
+                transition: $standard-transition;
+
+                small {
+                    color: $color-secondary;
+                    font-size: $font-size-small;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: $color-primary;
+                }
+            }
+        }
+    }
+}

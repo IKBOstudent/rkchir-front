@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchButton = () => {
+const CloseMenuButton = () => {
     return (
         <button type="button" className="button-icon">
             <svg
@@ -9,16 +9,17 @@ const SearchButton = () => {
                 fill="none"
                 role="img"
                 aria-hidden="true"
-                strokeWidth="1.5"
+                strokeWidth="2"
                 width="24"
             >
-                <title>Search Icon</title>
+                <title>Menu Icon</title>
 
-                <circle cx="9.813" cy="9.812" r="9.063" transform="rotate(-23.025 9.813 9.812)"></circle>
-                <path d="M16.221 16.22l7.029 7.03"></path>
+                <line x1="4.46967" y1="20.026" x2="20.026" y2="4.46966" />
+
+                <line x1="4.53033" y1="4.46967" x2="20.0867" y2="20.026" />
             </svg>
         </button>
     );
 };
 
-export default SearchButton;
+export default CloseMenuButton;

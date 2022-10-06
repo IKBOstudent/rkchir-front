@@ -12,7 +12,7 @@ const DesktopHeader = () => {
     return (
         <div className="desktop-header">
             <ul className="header-bar">
-                <li className="header-bar__item header-bar__item-logo">
+                <li className="header-bar__item header-logo">
                     <a href="/" className="header-bar__item-link">
                         <span>PC_PARTS</span>
                     </a>
@@ -48,7 +48,7 @@ const DesktopHeader = () => {
                     <SavedDropdown />
                 </li>
 
-                <li className="header-bar__item">
+                <li className="header-bar__item header-register">
                     <a href="/register">
                         <button type="button" className="button-default">
                             <span>Sign up</span>
