@@ -1,16 +1,15 @@
 @import '@styles/variables';
 
-main {
-    z-index: 1;
-}
-
 .configure {
     &-container {
-        margin-top: 2rem;
         max-width: 1440px;
         margin: 0 auto;
-        padding: 0 6rem;
-        padding-bottom: 2rem;
+        padding: 0rem 6rem;
+        padding-bottom: 4rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
     &-nav {
@@ -18,15 +17,12 @@ main {
     }
 
     &-menu {
-        margin-top: 2rem;
         padding: 0 1rem;
-
+        margin-top: 2rem;
         background-color: $color-white;
     }
 
     &-content {
-        margin-top: 1rem;
-
         padding: 0 1rem;
         z-index: 1;
         display: grid;

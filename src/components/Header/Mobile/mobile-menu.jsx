@@ -1,7 +1,7 @@
-import React from "react";
-import CloseMenuButton from "../Buttons/close-menu-button";
+import React from 'react';
+import CloseMenuButton from '../Buttons/close-menu-button';
 
-import "./mobile-header.scss";
+import './mobile-header.scss';
 
 const MobileMenu = () => {
     return (

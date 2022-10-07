@@ -1,8 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const CloseMenuButton = () => {
+    function handleCloseHamburgerMenu() {
+        document.getElementById('mobile-header-menu').style.transform = 'translateX(120%)';
+    }
+
     return (
-        <button type="button" className="button-icon">
+        <button type="button" className="button-icon" onClick={handleCloseHamburgerMenu}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -10,8 +14,7 @@ const CloseMenuButton = () => {
                 role="img"
                 aria-hidden="true"
                 strokeWidth="2"
-                width="24"
-            >
+                width="24">
                 <title>Menu Icon</title>
 
                 <line x1="4.46967" y1="20.026" x2="20.026" y2="4.46966" />

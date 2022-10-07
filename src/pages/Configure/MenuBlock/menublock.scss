@@ -6,20 +6,19 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+
+        span {
+            align-self: flex-end;
+        }
     }
 
     &-buttons {
         border: 1px solid $color-default;
-
-        label {
-            position: absolute;
-            top: 0.5rem;
-            left: 1rem;
-            font-size: $font-size-small;
-        }
     }
 
     &-form {
+        cursor: pointer !important;
+
         position: relative;
 
         display: flex;
@@ -27,6 +26,7 @@
         align-items: center;
 
         select {
+            position: relative;
             -webkit-appearance: none;
             -moz-appearance: none;
 
@@ -39,11 +39,21 @@
             color: $color-default;
             font-size: $font-size-medium;
             font-weight: $font-weight-bold;
+        }
 
-            cursor: pointer;
+        label {
+            pointer-events: none;
+            position: absolute;
+            top: 0.5rem;
+            left: 1rem;
+
+            white-space: nowrap;
+            font-size: $font-size-small;
         }
 
         svg {
+            pointer-events: none;
+
             position: absolute;
             right: 0;
             height: 12px;

@@ -1,16 +1,24 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .signup {
     &-container {
+        max-width: 380px;
+        min-width: 280px;
+        margin: auto;
+        padding: 0 2rem;
+        height: 80vh;
+
         display: flex;
         flex-direction: column;
         align-content: center;
-        row-gap: 2rem;
+        justify-content: center;
+        row-gap: 1rem;
+        text-align: center;
 
-        width: 300px;
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 10rem 2rem;
+        @media only screen and (max-height: 699px) {
+            height: fit-content;
+            padding: 4rem 2rem;
+        }
     }
 
     &-title {
@@ -50,26 +58,31 @@
                 top: 0.5rem;
                 left: 1rem;
                 font-size: $font-size-small;
+                color: $color-secondary;
             }
         }
 
-        .form-checkbox {
-            height: fit-content;
+        &-checkbox {
             align-self: flex-start;
+            display: flex;
+            gap: 0.4rem;
         }
     }
 
-    // @media only screen and (max-width: 991px) {
-    //     &-container {
-    //         padding-left: 4rem;
-    //         padding-right: 4rem;
-    //     }
-    // }
+    &-bottom-agreements {
+        font-size: $font-size-small;
+    }
 
-    // @media only screen and (max-width: 767px) {
-    //     &-container {
-    //         padding-left: 2rem;
-    //         padding-right: 2rem;
-    //     }
-    // }
+    &-link-login {
+        margin-top: 1rem;
+        border-top: 1px solid $color-default-light;
+        padding-top: 1rem;
+
+        font-size: $font-size-medium;
+        font-weight: $font-weight-bold;
+        a {
+            text-decoration: underline;
+            color: $color-primary;
+        }
+    }
 }

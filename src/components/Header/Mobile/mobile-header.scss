@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .mobile-header {
     &-menu {
@@ -8,17 +8,22 @@
         height: 100vh;
         width: 200px;
         z-index: 100;
-        padding: 2rem;
+        padding: 0 2rem;
 
         display: flex;
         flex-direction: column;
         gap: 2rem;
 
         background-color: #fff;
+        box-shadow: 0 0 16px 4px $color-default-transparent;
         transition: $standard-transition;
-        // transform: translateX(100%);
+        transform: translateX(120%);
 
         &-top {
+            height: 5rem;
+            display: flex;
+            align-items: center;
+
             button {
                 stroke: $color-default;
             }
