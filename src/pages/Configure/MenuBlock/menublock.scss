@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .configure-menu {
     &-container {
@@ -6,10 +6,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-
-        span {
-            align-self: flex-end;
-        }
+        gap: 1rem;
     }
 
     &-buttons {
@@ -25,6 +22,8 @@
         flex-direction: row;
         align-items: center;
 
+        transition: $standard-transition;
+
         select {
             position: relative;
             appearance: none;
@@ -36,8 +35,9 @@
             background: none;
 
             color: $color-default;
+            font-family: inherit;
             font-size: $font-size-medium;
-            font-weight: $font-weight-bold;
+            font-weight: $font-weight-black;
         }
 
         label {
@@ -65,12 +65,42 @@
         }
 
         &:hover {
-            background-color: $color-primary-transparent;
             color: $color-primary;
 
             svg {
                 fill: $color-primary;
             }
+        }
+    }
+
+    &-sort {
+        padding-left: 0.5rem;
+        display: flex;
+        gap: 3rem;
+        flex-direction: row;
+        align-self: flex-end;
+
+        label {
+            font-size: $font-size-medium;
+        }
+
+        select {
+            font-size: $font-size-medium;
+            font-family: inherit;
+            border: none;
+            outline: none;
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        &-container {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        &-buttons,
+        &-sort {
+            align-self: flex-start;
         }
     }
 }

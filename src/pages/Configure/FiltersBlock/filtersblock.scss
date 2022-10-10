@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .filters {
     &-container {
@@ -9,7 +9,7 @@
         flex-direction: column;
         // padding: 2rem;
 
-        li {
+        &__item {
             height: 2rem;
             width: 100%;
             border-top: 1px solid $color-default;

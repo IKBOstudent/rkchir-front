@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import './item-card.scss';
+import "./item-card.scss";
 
 const ItemCard = () => {
     return (
         <div className="item-card card">
-            <a href="/">
+            <a href="#">
                 <h3>Title</h3>
                 <img src="" alt="" />
                 <span>asdf</span>
