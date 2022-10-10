@@ -11,7 +11,7 @@ import CalculatorPSU from "@pages/Calculators/PSU";
 
 import SignUp from "@pages/SignUp";
 
-// origin, pc-builds
+// origin pc, pc-builds, box.co.uk
 
 const App = () => {
     return (

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './signup.scss';
+import "./signup.scss";
 
 const SignUp = () => {
     return (
@@ -11,13 +11,7 @@ const SignUp = () => {
             <section>
                 <form className="signup-form">
                     <div className="signup-form-input">
-                        <input
-                            id="signup-text"
-                            type="text"
-                            className="form-name"
-                            placeholder="Ivan"
-                            required
-                        />
+                        <input id="signup-text" type="text" className="form-name" placeholder="Ivan" required />
                         <label htmlFor="signup-text">Name</label>
                     </div>
 
@@ -29,7 +23,7 @@ const SignUp = () => {
                             placeholder="ivan@gmail.com"
                             required
                         />
-                        <label htmlFor="signup-text">Email</label>
+                        <label htmlFor="signup-email">Email</label>
                     </div>
 
                     <div className="signup-form-input">
@@ -40,12 +34,12 @@ const SignUp = () => {
                             placeholder="********"
                             required
                         />
-                        <label htmlFor="signup-text">Password</label>
+                        <label htmlFor="signup-password">Password</label>
                     </div>
 
                     <div className="signup-form-checkbox">
                         <input id="signup-checkbox" type="checkbox" value="check" />
-                        <label htmlFor="signup-text">Remember me</label>
+                        <label htmlFor="signup-checkbox">Remember me</label>
                     </div>
 
                     <button type="submit" className="button-default">
