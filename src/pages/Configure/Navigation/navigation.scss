@@ -4,7 +4,8 @@
     &-list {
         display: flex;
         flex-direction: row;
-        // overflow-x: hidden;
+        overflow-x: hidden;
+        padding-bottom: 2px;
 
         li {
             width: 100%;

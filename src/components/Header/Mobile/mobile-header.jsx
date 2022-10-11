@@ -1,10 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import SearchButton from "../Buttons/search-button";
-import SavedButton from "../Buttons/saved-button";
-import MenuButton from "../Buttons/menu-button";
+import SearchButton from '../Buttons/search-button';
+import SavedButton from '../Buttons/saved-button';
+import MenuButton from '../Buttons/menu-button';
 
-import MobileMenu from "./mobile-menu";
+import MobileMenu from './mobile-menu';
+
+export function handleToggleHamburgerMenu(open) {
+    let menu = document.getElementById('mobile-header-menu');
+    menu.style['transform'] = open ? 'translate(0)' : 'translate(120%)';
+
+    let background = document.getElementById('mobile-header-background');
+    background.style['transform'] = open ? 'scale(1)' : 'scale(0)';
+    background.style['opacity'] = open ? '1' : '0';
+}
 
 const MobileHeader = () => {
     return (

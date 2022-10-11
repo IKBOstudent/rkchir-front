@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .configure-menu {
     &-container {
@@ -26,6 +26,8 @@
 
         select {
             position: relative;
+
+            cursor: pointer;
             appearance: none;
 
             padding: 2rem 0 0.8rem 1rem;
@@ -85,6 +87,9 @@
         }
 
         select {
+            padding: 0 0.5rem;
+            cursor: pointer;
+
             font-size: $font-size-medium;
             font-family: inherit;
             border: none;

@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .filters {
     &-container {
@@ -7,12 +7,24 @@
     &-list {
         display: flex;
         flex-direction: column;
-        // padding: 2rem;
 
         &__item {
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem;
             height: 2rem;
-            width: 100%;
-            border-top: 1px solid $color-default;
+            // width: 100%;
+            border-top: 1px solid $color-default-light;
+
+            font-size: $font-size-medium;
+
+            svg {
+                height: 20px;
+                stroke: $color-default;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./menublock.scss";
+import './menublock.scss';
 
 const MenuBlock = () => {
     return (
@@ -13,8 +13,7 @@ const MenuBlock = () => {
                         xmlns="http://www.w3.org/2000/svg"
                         role="img"
                         aria-hidden="true"
-                        focusable="false"
-                    >
+                        focusable="false">
                         <title>Arrow Icon</title>
                         <path d="M7.066 1.5L4 6.099.934 1.5h6.132z"></path>
                     </svg>
@@ -32,7 +31,7 @@ const MenuBlock = () => {
             </div>
             <div className="configure-menu-sort">
                 <label htmlFor="sort-form">
-                    {"sort by "}
+                    sort by
                     <select id="sort-form" defaultValue="popular">
                         <option value="popular">popular</option>
                         <option value="popular">price</option>

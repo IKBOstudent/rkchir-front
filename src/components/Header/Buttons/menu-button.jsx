@@ -1,12 +1,13 @@
 import React from 'react';
 
-const MenuButton = () => {
-    function handleToggleHamburgerMenu() {
-        document.getElementById('mobile-header-menu').style.transform = 'translateX(0)';
-    }
+import { handleToggleHamburgerMenu } from '../Mobile/mobile-header';
 
+const MenuButton = () => {
     return (
-        <button type="button" className="button-icon" onClick={handleToggleHamburgerMenu}>
+        <button
+            type="button"
+            className="button-icon"
+            onClick={() => handleToggleHamburgerMenu(true)}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

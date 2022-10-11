@@ -15,9 +15,9 @@
         row-gap: 1rem;
         text-align: center;
 
-        @media only screen and (max-height: 699px) {
+        @media only screen and (max-height: 820px) {
             height: fit-content;
-            padding: 4rem 2rem;
+            padding: 2rem;
         }
     }
 

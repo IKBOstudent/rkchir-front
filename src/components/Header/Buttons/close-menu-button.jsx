@@ -1,12 +1,13 @@
 import React from 'react';
 
-const CloseMenuButton = () => {
-    function handleCloseHamburgerMenu() {
-        document.getElementById('mobile-header-menu').style.transform = 'translateX(120%)';
-    }
+import { handleToggleHamburgerMenu } from '../Mobile/mobile-header';
 
+const CloseMenuButton = () => {
     return (
-        <button type="button" className="button-icon" onClick={handleCloseHamburgerMenu}>
+        <button
+            type="button"
+            className="button-icon"
+            onClick={() => handleToggleHamburgerMenu(false)}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"

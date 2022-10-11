@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import "./build-card.scss";
+import './build-card.scss';
 
 const BuildCard = () => {
     return (
         <div className="builds-card-box card">
-            <a href="/">
+            <a href="#">
                 <h3>Title</h3>
                 <span>
                     An <i>item</i> from list
