@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .mobile-header {
     &-background {
@@ -18,6 +18,7 @@
     }
 
     &-menu {
+        overflow-y: scroll;
         transform: translateX(120%);
 
         position: fixed;
@@ -37,7 +38,7 @@
         transition: $standard-transition;
 
         &-top {
-            height: 5rem;
+            min-height: 5rem;
             display: flex;
             align-items: center;
 

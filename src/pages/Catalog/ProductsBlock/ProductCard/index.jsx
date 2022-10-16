@@ -1,13 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import './product-card.scss';
+import "./product-card.scss";
 
-const ProductCard = () => {
+const ProductCard = ({ image_url }) => {
     return (
         <div className="products-card-box card">
             <a href="#">
-                <h3>Title</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, dolores!</p>
+                <img src={image_url} alt="" />
+                <div>
+                    <h3>Title</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, dolores!</p>
+                </div>
             </a>
         </div>
     );

@@ -5,7 +5,16 @@
         padding: 2rem;
         grid-column: span 4;
 
+        img {
+            object-fit: contain;
+            height: 10rem;
+        }
+
         a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1rem;
             color: $color-default;
 
             h3 {
@@ -25,6 +34,16 @@
 
         @media only screen and (max-width: 767px) {
             grid-column: span 12;
+
+            a {
+                flex-direction: row;
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            a {
+                flex-direction: column;
+            }
         }
     }
 }

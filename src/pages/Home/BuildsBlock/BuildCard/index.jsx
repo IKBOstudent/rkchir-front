@@ -1,17 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import './build-card.scss';
+import "./build-card.scss";
 
-const BuildCard = () => {
+const BuildCard = ({ image_url }) => {
     return (
         <div className="builds-card-box card">
             <a href="#">
-                <h3>Title</h3>
-                <span>
-                    An <i>item</i> from list
-                </span>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique, dolores!</p>
+                <img src={image_url} alt="" />
+
+                <h4>PC Assembled Gaming I7-12700 – RTX 3070 8GB</h4>
             </a>
+            <span>$2,440.00</span>
         </div>
     );
 };
