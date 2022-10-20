@@ -1,7 +1,7 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 body {
-    font-family: "Satoshi", sans-serif;
+    font-family: 'Satoshi', sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
@@ -44,14 +44,15 @@ button {
         font-weight: $font-weight-medium;
 
         transition: $standard-transition;
+        cursor: pointer;
 
         &:hover {
-            cursor: pointer;
             background-color: $color-primary-hover;
         }
 
         &:active {
             background-color: $color-primary-active;
+            transform: translate(2px, -2px);
         }
     }
 
