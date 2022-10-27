@@ -5,8 +5,6 @@ import "./product-card.scss";
 const ProductCard = ({ image_url }) => {
     return (
         <div className="products-card-wrapper">
-            <div className="shape1"></div>
-            <div className="shape2"></div>
             <div className="products-card-box card">
                 <a href="#">
                     <img src={image_url} alt="" />

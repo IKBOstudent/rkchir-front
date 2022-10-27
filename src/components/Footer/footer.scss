@@ -47,32 +47,39 @@ footer {
 
         &-left {
             &-social {
+                --w: 22px;
+                max-width: calc(var(--w) * 6 + 2rem);
+
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 gap: 1rem;
 
                 .footer-svg {
+                    width: calc(2 * var(--w));
+                    height: calc(2 * var(--w));
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     border-radius: 4px;
                     overflow: hidden;
                     position: relative;
-                    padding: 10px;
-                    height: fit-content;
 
                     &:before {
                         content: "";
                         position: absolute;
                         top: 0;
                         left: 0;
-                        height: 88%;
+                        height: 100%;
                         width: 100%;
                         background-color: $color-primary;
                         transform: translateY(-120%);
                         transition: 0.4s ease;
                         z-index: -1;
-                        border-radius: 4px;
                     }
 
                     svg {
+                        width: var(--w);
                         fill: $color-default;
                         transition: 0.4s ease;
                     }

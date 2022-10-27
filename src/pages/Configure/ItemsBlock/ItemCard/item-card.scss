@@ -18,9 +18,10 @@
 
         &-buttons {
             overflow: hidden;
-
+            width: 100%;
             justify-self: flex-end;
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             gap: 1rem;
 
@@ -51,6 +52,10 @@
             grid-column: span 12;
         }
     }
+}
+
+.item-card {
+    transition: 200ms ease-in-out;
 }
 
 .items-grid:hover .item-card {

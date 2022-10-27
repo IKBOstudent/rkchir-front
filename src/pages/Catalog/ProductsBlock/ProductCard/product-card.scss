@@ -1,34 +1,38 @@
 @import "@styles/variables";
 
-.shape1 {
-    position: absolute;
-    left: 50px;
-    top: 40px;
-    height: 50%;
-    width: 60%;
-    background: linear-gradient(to right, rgba(187, 113, 236, 0.5), #a761f7);
-    transform: rotate(-20deg);
-    transition: 1s ease;
-    filter: blur(2px);
-}
-
-.shape2 {
-    position: absolute;
-    left: 100px;
-    top: 50px;
-    height: 60%;
-    width: 50%;
-    background: linear-gradient(to right, rgba(60, 156, 245, 0.715), #50a1e3);
-    transform: rotate(-20deg);
-    transition: 1s ease;
-
-    filter: blur(2px);
-}
-
 .products-card {
     &-wrapper {
         position: relative;
         grid-column: span 4;
+
+        &::before,
+        &::after {
+            left: 0;
+            top: 0;
+            border-radius: 4px;
+            content: "";
+            position: absolute;
+
+            height: calc(100%);
+            width: calc(100%);
+            background: linear-gradient(to right, #eb39ff, #6d1eff);
+            filter: blur(1px) saturate(200%);
+
+            transition: 300ms ease-out;
+            transform: scale(0.8);
+            z-index: -1;
+        }
+
+        &::after {
+            filter: blur(10px) saturate(200%);
+        }
+
+        &:hover {
+            &::before,
+            &::after {
+                transform: scale(0.7, 1.1) skewX(-10deg) translate(4px, -4px);
+            }
+        }
 
         @media only screen and (max-width: 991px) {
             grid-column: span 6;
@@ -37,23 +41,15 @@
         @media only screen and (max-width: 767px) {
             grid-column: span 12;
         }
-
-        &:hover {
-            .shape1,
-            .shape2 {
-                transform: scale(1.1) rotate(-20deg);
-            }
-        }
     }
 
     &-box {
-        // border: 1px solid;
         border: none;
 
         border-radius: 2px;
         padding: 2rem 3rem;
-        background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(10px);
 
         img {
             display: none;

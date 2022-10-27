@@ -19,8 +19,6 @@ const SocialIcon = ({ icon }) => {
                 role="img"
                 aria-hidden="true"
                 aria-label="dropdown"
-                width="24"
-                height="24"
                 fill="black"
             >
                 <path d={icons[icon]}></path>
