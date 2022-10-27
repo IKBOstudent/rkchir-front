@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 footer {
     border-top: 1px solid $color-default;
@@ -39,6 +39,50 @@ footer {
                         &:hover {
                             color: $color-primary;
                             text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-left {
+            &-social {
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+
+                .footer-svg {
+                    border-radius: 4px;
+                    overflow: hidden;
+                    position: relative;
+                    padding: 10px;
+                    height: fit-content;
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 88%;
+                        width: 100%;
+                        background-color: $color-primary;
+                        transform: translateY(-120%);
+                        transition: 0.4s ease;
+                        z-index: -1;
+                        border-radius: 4px;
+                    }
+
+                    svg {
+                        fill: $color-default;
+                        transition: 0.4s ease;
+                    }
+
+                    &:hover {
+                        &:before {
+                            transform: translateY(0);
+                        }
+                        svg {
+                            fill: $color-white;
                         }
                     }
                 }
@@ -96,7 +140,7 @@ footer {
                         font-weight: $font-weight-medium;
                     }
                     &:not(:last-of-type)::after {
-                        content: '|';
+                        content: "|";
                         font-weight: $font-weight-medium;
                         margin: 0 0.5rem;
                         font-size: $font-size-medium;

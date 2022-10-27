@@ -4,13 +4,7 @@ import "./signup.scss";
 
 const ArrowIcon = () => {
     return (
-        <svg
-            width="20"
-            height="15"
-            viewBox="0 0 24 19"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            strokeWidth="2">
+        <svg width="20" height="15" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg" strokeWidth="2">
             <path d="M14 18L8 12L14 6" />
         </svg>
     );
@@ -66,8 +60,8 @@ const SignUp = () => {
                         <label htmlFor="signup-checkbox">Remember me</label>
                     </div>
 
-                    <button type="submit" className="button-default">
-                        Sign Up
+                    <button type="submit" className="button-animated">
+                        <span>Sign Up</span>
                     </button>
                 </form>
             </section>

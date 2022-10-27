@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .item {
     &-card {
@@ -6,9 +6,42 @@
         grid-column: span 4;
         height: 250px;
 
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         a {
             display: grid;
             color: $color-default;
+        }
+
+        &-buttons {
+            overflow: hidden;
+
+            justify-self: flex-end;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            li {
+                transform: translateY(80px);
+                opacity: 0;
+                transition: 0.3s ease-in-out;
+                transition-delay: calc(100ms * var(--delay));
+
+                button {
+                    background-color: $color-default;
+                    border-radius: 2px;
+                    height: 3rem;
+                    padding-right: 2rem;
+                    padding-left: 2rem;
+
+                    &:hover {
+                        background-color: $color-default-transparent;
+                    }
+                }
+            }
         }
 
         @media only screen and (max-width: 1199px) {
@@ -17,5 +50,18 @@
         @media only screen and (max-width: 570px) {
             grid-column: span 12;
         }
+    }
+}
+
+.items-grid:hover .item-card {
+    opacity: 0.4;
+}
+
+.items-grid .item-card:hover {
+    opacity: 1;
+    transform: none;
+    ul li {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

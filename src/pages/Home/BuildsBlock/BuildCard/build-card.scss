@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .builds-card {
     &-box {
@@ -15,8 +15,6 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                background-color: $color-white;
-                opacity: 1;
 
                 color: $color-default;
 
@@ -24,8 +22,62 @@
                     margin: 1rem 0;
                 }
 
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $color-white;
+                    z-index: -1;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -2px;
+                    left: -2px;
+                    height: calc(100% + 4px);
+                    width: calc(100% + 4px);
+
+                    opacity: 0;
+                    transition: $standard-transition;
+
+                    background: linear-gradient(
+                        90deg,
+                        #ff0000,
+                        #ff7300,
+                        #fffb00,
+                        #48ff00,
+                        #00ffd5,
+                        #002bff,
+                        #7a00ff,
+                        #ff00c8,
+                        #ff0000
+                    );
+                    background-size: 200% 200%;
+                    animation: glowing 20s infinite linear;
+
+                    filter: blur(8px);
+                    z-index: -1;
+                }
+
                 &:hover {
                     color: $color-primary;
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+
+                @keyframes glowing {
+                    from {
+                        background-position: 0 50%;
+                    }
+                    to {
+                        background-position: 200% 50%;
+                    }
                 }
             }
 
@@ -42,6 +94,10 @@
             background-position: center;
             height: 12rem;
             width: 100%;
+            // text-align: center;
+            button: {
+                background-color: $color-default;
+            }
         }
 
         &__bottom {

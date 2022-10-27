@@ -6,7 +6,7 @@ import DesktopHeader from "./desktop-header";
 
 const Header = () => {
     return (
-        <header>
+        <header id="header">
             <div className="header-container">
                 <DesktopHeader />
                 <MobileHeader />

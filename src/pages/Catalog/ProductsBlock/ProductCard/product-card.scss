@@ -1,11 +1,62 @@
 @import "@styles/variables";
 
+.shape1 {
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    height: 50%;
+    width: 60%;
+    background: linear-gradient(to right, rgba(187, 113, 236, 0.5), #a761f7);
+    transform: rotate(-20deg);
+    transition: 1s ease;
+    filter: blur(2px);
+}
+
+.shape2 {
+    position: absolute;
+    left: 100px;
+    top: 50px;
+    height: 60%;
+    width: 50%;
+    background: linear-gradient(to right, rgba(60, 156, 245, 0.715), #50a1e3);
+    transform: rotate(-20deg);
+    transition: 1s ease;
+
+    filter: blur(2px);
+}
+
 .products-card {
-    &-box {
-        padding: 2rem;
+    &-wrapper {
+        position: relative;
         grid-column: span 4;
 
+        @media only screen and (max-width: 991px) {
+            grid-column: span 6;
+        }
+
+        @media only screen and (max-width: 767px) {
+            grid-column: span 12;
+        }
+
+        &:hover {
+            .shape1,
+            .shape2 {
+                transform: scale(1.1) rotate(-20deg);
+            }
+        }
+    }
+
+    &-box {
+        // border: 1px solid;
+        border: none;
+
+        border-radius: 2px;
+        padding: 2rem 3rem;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(8px);
+
         img {
+            display: none;
             object-fit: contain;
             height: 10rem;
         }
@@ -16,6 +67,7 @@
             justify-content: center;
             gap: 1rem;
             color: $color-default;
+            position: relative;
 
             h3 {
                 margin: 0.5rem 0;
@@ -24,25 +76,6 @@
             p {
                 margin-top: 0.7rem;
                 padding-top: 1rem;
-                border-top: 1px solid $color-default-light;
-            }
-        }
-
-        @media only screen and (max-width: 991px) {
-            grid-column: span 6;
-        }
-
-        @media only screen and (max-width: 767px) {
-            grid-column: span 12;
-
-            a {
-                flex-direction: row;
-            }
-        }
-
-        @media only screen and (max-width: 480px) {
-            a {
-                flex-direction: column;
             }
         }
     }

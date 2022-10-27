@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
-import './items.scss';
+import "./items.scss";
 
-import ItemCard from './ItemCard';
+import ItemCard from "./ItemCard";
 
 const ItemsBlock = () => {
     return (

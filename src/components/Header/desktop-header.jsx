@@ -50,7 +50,7 @@ const DesktopHeader = () => {
 
                 <li className="header-bar__item header-register">
                     <a href="/register">
-                        <button type="button" className="button-default">
+                        <button type="button" className="button-animated">
                             <span>Sign up</span>
                         </button>
                     </a>
