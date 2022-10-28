@@ -7,17 +7,6 @@
         max-width: 250px;
         flex-grow: 1;
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: $color-white;
-            z-index: -1;
-        }
-
         &::before {
             content: "";
             position: absolute;
@@ -44,14 +33,23 @@
             background-size: 200% 200%;
             animation: glowing 20s infinite linear;
 
-            filter: blur(8px);
+            filter: blur(4px);
+            z-index: -1;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: $color-white;
             z-index: -1;
         }
 
         &:hover {
-            a {
-                color: $color-primary;
-            }
+            // transform: none;
 
             &::before {
                 opacity: 1;

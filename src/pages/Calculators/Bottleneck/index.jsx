@@ -16,7 +16,7 @@ const CalculatorBottleneck = () => {
                             <div className="calc-select-box">
                                 <div className="calc-select-box__img"></div>
                                 <div className="calc-select-box__main">
-                                    <span>Title</span>
+                                    <span>Processor</span>
                                     <select id="">
                                         <option value="">--choose an option--</option>
                                         <option value="1">1</option>
@@ -29,7 +29,7 @@ const CalculatorBottleneck = () => {
                             <div className="calc-select-box">
                                 <div className="calc-select-box__img"></div>
                                 <div className="calc-select-box__main">
-                                    <span>Title</span>
+                                    <span>Graphic card</span>
                                     <select id="">
                                         <option value="">--choose an option--</option>
                                         <option value="1">1</option>
@@ -42,7 +42,7 @@ const CalculatorBottleneck = () => {
                             <div className="calc-select-box">
                                 <div className="calc-select-box__img"></div>
                                 <div className="calc-select-box__main">
-                                    <span>Title</span>
+                                    <span>Screen resolution</span>
                                     <select id="">
                                         <option value="">--choose an option--</option>
                                         <option value="1">1</option>
@@ -54,9 +54,15 @@ const CalculatorBottleneck = () => {
                             </div>
 
                             <div className="calc-select-boxLast" style={{ gridRow: "span 2" }}>
-                                <div className="calc-select-boxLast-card">A</div>
-                                <div className="calc-select-boxLast-card">B</div>
-                                <div className="calc-select-boxLast-card">C</div>
+                                <div className="calc-select-boxLast-card">For Gaming</div>
+                                <div className="calc-select-boxLast-card">
+                                    Processor <br />
+                                    Intense tasks
+                                </div>
+                                <div className="calc-select-boxLast-card">
+                                    Video card <br />
+                                    Intense tasks
+                                </div>
                             </div>
                             <button type="submit" className="button-animated">
                                 <span>Calculate</span>
