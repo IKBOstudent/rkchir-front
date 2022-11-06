@@ -60,7 +60,7 @@ const SignUp = () => {
                         <label htmlFor="signup-checkbox">Remember me</label>
                     </div>
 
-                    <button type="submit" className="button-animated">
+                    <button id="signup-submit" type="submit" className="button-animated">
                         <span>Sign Up</span>
                     </button>
                 </form>
