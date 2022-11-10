@@ -2,34 +2,17 @@ import React from "react";
 
 import "./navigation.scss";
 
-const Navigation = () => {
+const Navigation = ({ categories, selectedCategory, setCategory }) => {
     return (
         <ol className="configure-nav-list">
-            <li className="current">
-                <a href="#">
-                    <sup>01</sup>
-                    <strong>System</strong>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <sup>02</sup>
-                    <strong>Peripherals</strong>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <sup>03</sup>
-                    <strong>Customization</strong>
-                </a>
-            </li>
-
-            <li>
-                <a href="#">
-                    <sup>04</sup>
-                    <strong>Other</strong>
-                </a>
-            </li>
+            {categories.map((item, id) => (
+                <li key={id} className={selectedCategory === item ? "current" : ""} onClick={() => setCategory(item)}>
+                    <div>
+                        <sup>0{id + 1}</sup>
+                        <strong>System</strong>
+                    </div>
+                </li>
+            ))}
         </ol>
     );
 };

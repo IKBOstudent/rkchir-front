@@ -8,24 +8,9 @@ const ItemsBlock = () => {
     return (
         <div className="items-container">
             <div className="items-grid">
-                <ItemCard />
-                <ItemCard />
-                <ItemCard />
-
-                <ItemCard />
-                <ItemCard />
-                <ItemCard />
-
-                <ItemCard />
-                <ItemCard />
-                <ItemCard />
-
-                <ItemCard />
-                <ItemCard />
-                <ItemCard />
-
-                <ItemCard />
-                <ItemCard />
+                {[1, 2, 3, 4, 5, 6].map((elem, id) => (
+                    <ItemCard key={id} num={elem} />
+                ))}
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import CloseMenuButton from "../Buttons/close-menu-button";
 
 import "./mobile-header.scss";
 
-import { handleToggleHamburgerMenu } from "./mobile-header";
+import { handleToggleHamburgerMenu } from "../desktop-header";
 
 const MobileMenu = () => {
     return (

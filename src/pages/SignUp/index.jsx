@@ -24,7 +24,7 @@ const SignUp = () => {
                 <h1>Get started for free</h1>
             </section>
             <section>
-                <form className="signup-form">
+                <form className="signup-form" noValidate>
                     <div className="signup-form-input">
                         <input id="signup-text" type="text" className="form-name" placeholder="Ivan" required />
                         <label htmlFor="signup-text">Name</label>

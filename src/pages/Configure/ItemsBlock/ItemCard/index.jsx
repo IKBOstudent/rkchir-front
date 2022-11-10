@@ -2,7 +2,7 @@ import React from "react";
 
 import "./item-card.scss";
 
-const ItemCard = () => {
+const ItemCard = ({ num }) => {
     return (
         <div className="item-card card">
             <a href="#">
@@ -19,8 +19,8 @@ const ItemCard = () => {
                     </button>
                 </li>
                 <li style={{ "--delay": 3 }}>
-                    <button className="button-default">
-                        <span>+</span>
+                    <button className="button-default button-add-item" style={{ backgroundColor: "#0b091c" }}>
+                        <span style={{ pointerEvents: "none" }}>+</span>
                     </button>
                 </li>
             </ul>

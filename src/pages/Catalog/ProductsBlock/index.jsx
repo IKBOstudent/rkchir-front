@@ -29,7 +29,7 @@ const ProductsBlock = () => {
                 <h3>products 1</h3>
                 <div className="products-box-grid">
                     {[1, 2, 3].map((item, id) => (
-                        <ProductCard />
+                        <ProductCard key={id} />
                     ))}
                 </div>
             </div>
@@ -37,7 +37,7 @@ const ProductsBlock = () => {
                 <h3>Peripherals</h3>
                 <div className="products-box-photoGrid">
                     {images.map((item, id) => (
-                        <div className="products-box-photoGrid__item card">
+                        <div key={id} className="products-box-photoGrid__item card">
                             <img src={item} alt="" />
                             {/* <span>CPU</span> */}
                         </div>

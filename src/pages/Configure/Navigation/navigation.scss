@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .configure-nav {
     &-list {
@@ -7,12 +7,16 @@
         overflow-x: hidden;
         padding-bottom: 2px;
 
+        @media only screen and (max-width: 800px) {
+            overflow-x: scroll;
+        }
+
         li {
             width: 100%;
             min-width: 10rem;
             transition: $standard-transition;
 
-            a {
+            div {
                 display: flex;
                 align-items: center;
                 flex-direction: column;

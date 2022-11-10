@@ -17,7 +17,7 @@ import SignUp from "@pages/SignUp";
 const App = () => {
     React.useEffect(() => {
         const script = document.createElement("script");
-        script.defer = true;
+        // script.defer = true;
         script.src = "./script.js";
 
         document.body.appendChild(script);

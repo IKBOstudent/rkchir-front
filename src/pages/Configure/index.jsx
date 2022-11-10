@@ -1,23 +1,31 @@
-import React from 'react';
+import React from "react";
 
-import './configure.scss';
+import "./configure.scss";
 
-import Header from '@components/Header';
-import Footer from '@components/Footer';
+import Header from "@components/Header";
+import Footer from "@components/Footer";
 
-import Navigation from './Navigation';
-import MenuBlock from './MenuBlock';
-import ItemsBlock from './ItemsBlock';
-import FiltersBlock from './FiltersBlock';
+import Navigation from "./Navigation";
+import MenuBlock from "./MenuBlock";
+import ItemsBlock from "./ItemsBlock";
+import FiltersBlock from "./FiltersBlock";
+
+const categories = ["System", "Peripherals", "Customization", "Other"];
 
 const Configure = () => {
+    const [category, setCategory] = React.useState(categories[0]);
+
     return (
         <>
             <Header />
             <main>
                 <div className="configure-container">
                     <nav className="configure-nav">
-                        <Navigation />
+                        <Navigation
+                            categories={categories}
+                            selectedCategory={category}
+                            setCategory={name => setCategory(name)}
+                        />
                     </nav>
                     <section className="configure-menu">
                         <MenuBlock />

@@ -2,8 +2,9 @@ import React from "react";
 
 const SearchButton = () => {
     return (
-        <button type="button" className="button-icon">
+        <button id="search-icon" type="button" className="button-icon">
             <svg
+                id="search-icon-svg"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"

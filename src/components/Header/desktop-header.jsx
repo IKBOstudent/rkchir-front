@@ -7,6 +7,17 @@ import SearchDropdown from "./Dropdowns/SearchDropdown";
 import SavedButton from "./Buttons/saved-button";
 import SearchButton from "./Buttons/search-button";
 import CalculatorsButton from "./Buttons/calculators-button";
+import MobileMenu from "./Mobile/mobile-menu";
+import MenuButton from "./Buttons/menu-button";
+
+export function handleToggleHamburgerMenu(open) {
+    let menu = document.getElementById("mobile-header-menu");
+    menu.style["transform"] = open ? "translate(0)" : "translate(120%)";
+
+    let background = document.getElementById("mobile-header-background");
+    background.style["transform"] = open ? "scale(1)" : "scale(0)";
+    background.style["opacity"] = open ? "1" : "0";
+}
 
 const DesktopHeader = () => {
     return (
@@ -46,6 +57,11 @@ const DesktopHeader = () => {
                 <li className="header-bar__item header-bar__item-icon">
                     <SavedButton />
                     <SavedDropdown />
+                </li>
+
+                <li className="header-bar__item header-bar__item-icon header-menu">
+                    <MobileMenu />
+                    <MenuButton />
                 </li>
 
                 <li className="header-bar__item header-register">

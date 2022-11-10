@@ -12,7 +12,7 @@ const SocialIcon = ({ icon }) => {
     ];
 
     return (
-        <a class="footer-svg" href="#">
+        <a className="footer-svg" href="#">
             <svg
                 viewBox="0 0 16 16"
                 xmlns="http://www.w3.org/2000/svg"

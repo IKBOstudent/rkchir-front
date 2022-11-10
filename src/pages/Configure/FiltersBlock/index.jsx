@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './filtersblock.scss';
+import "./filtersblock.scss";
 
 const ArrowIcon = () => {
     return (
@@ -12,25 +12,25 @@ const ArrowIcon = () => {
 
 const FiltersBlock = () => {
     const filters = {
-        Price: ['$100', '$200'],
-        Brand: ['AMD', 'Intel'],
+        Price: ["$100", "$200"],
+        Brand: ["AMD", "Intel"],
         Model: [
-            'AMD Ryzen 3',
-            'AMD Ryzen 5',
-            'AMD Ryzen 7',
-            'AMD Ryzen 9',
-            'Intel Core i3',
-            'Intel Core i5',
-            'Intel Core i7',
-            'Intel Core i9',
+            "AMD Ryzen 3",
+            "AMD Ryzen 5",
+            "AMD Ryzen 7",
+            "AMD Ryzen 9",
+            "Intel Core i3",
+            "Intel Core i5",
+            "Intel Core i7",
+            "Intel Core i9",
         ],
     };
 
     return (
         <div className="filters-container">
             <ul className="filters-list">
-                {Object.keys(filters).map((category) => (
-                    <li className="filters-list__item">
+                {Object.keys(filters).map((category, id) => (
+                    <li key={id} className="filters-list__item">
                         <h3>{category}</h3>
                         <ArrowIcon />
                     </li>
