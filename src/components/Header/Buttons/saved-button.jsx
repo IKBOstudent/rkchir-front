@@ -1,8 +1,29 @@
-import React from "react";
+import React from 'react';
 
 const SavedButton = () => {
+    function handleToggleSaved() {
+        document.getElementById('saved-dropdown').style.display = 'block';
+    }
+
+    const clickedOutside = (event) => {
+        if (!event.target.closest('.header-saved')) {
+            let saved = document.getElementById('saved-dropdown');
+            if (saved.style.display === 'block') {
+                saved.style.display = 'none';
+            }
+        }
+    };
+
+    React.useEffect(() => {
+        document.addEventListener('click', clickedOutside);
+
+        return () => {
+            document.removeEventListener('click', clickedOutside);
+        };
+    }, []);
+
     return (
-        <button type="button" className="button-icon">
+        <button type="button" className="button-icon" onClick={handleToggleSaved}>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -10,8 +31,7 @@ const SavedButton = () => {
                 role="img"
                 aria-hidden="true"
                 strokeWidth="1.5"
-                width="24"
-            >
+                width="24">
                 <title>Saved Icon</title>
 
                 <path d="M7 4V2.31c0-.347.134-.68.373-.926.238-.246.562-.384.9-.384h11.454c.338 0 .662.138.9.384.239.246.373.579.373.926V20"></path>

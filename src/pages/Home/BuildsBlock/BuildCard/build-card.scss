@@ -1,14 +1,11 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .builds-card {
-    &-box {
+    &-background {
         position: relative;
-        padding: 2rem;
-        max-width: 250px;
-        flex-grow: 1;
 
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: -2px;
             left: -2px;
@@ -34,23 +31,10 @@
             animation: glowing 20s infinite linear;
 
             filter: blur(4px);
-            z-index: -1;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            background-color: $color-white;
-            z-index: -1;
+            z-index: -2;
         }
 
         &:hover {
-            // transform: none;
-
             &::before {
                 opacity: 1;
             }
@@ -64,21 +48,23 @@
                 background-position: 200% 50%;
             }
         }
+    }
+
+    &-box {
+        background-color: $color-white;
+        border-radius: 2px;
+        max-width: 250px;
+        padding: 2rem;
 
         &__top {
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            a {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
+            flex-direction: column;
+            justify-content: center;
 
-                color: $color-default;
+            color: $color-default;
 
-                h4 {
-                    margin: 1rem 0;
-                }
+            h4 {
+                margin: 1rem 0;
             }
 
             button {
@@ -95,16 +81,36 @@
             height: 12rem;
             width: 100%;
             // text-align: center;
-            button: {
+            button {
                 background-color: $color-default;
             }
         }
 
         &__bottom {
-            span {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            /* h4 {
                 font-size: $font-size-large;
                 font-weight: $font-weight-black;
                 color: $color-primary;
+            } */
+            .button-clear {
+                display: flex;
+                flex-direction: row;
+
+                svg {
+                    margin-left: 4px;
+                    stroke: $color-default;
+                    transform: rotate(180deg);
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

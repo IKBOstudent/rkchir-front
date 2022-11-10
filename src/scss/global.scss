@@ -1,7 +1,7 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 body {
-    font-family: "Satoshi", sans-serif;
+    font-family: 'Satoshi', sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
@@ -49,6 +49,41 @@ button {
         }
     }
 
+    &-shop {
+        cursor: pointer;
+
+        border-radius: 2px;
+        /* border: 2px solid $color-default; */
+        background-color: #1510441a;
+
+        min-width: 40px;
+        padding: 1rem;
+
+        transition: all 200ms ease;
+
+        span {
+            font-size: $font-size-small;
+            font-weight: $font-weight-bold;
+            color: $color-default;
+        }
+
+        &:hover {
+            background-color: $color-primary-transparent;
+        }
+    }
+
+    &-clear {
+        cursor: pointer;
+        min-width: 40px;
+        padding: 0.5rem;
+
+        span {
+            font-size: $font-size-small;
+            font-weight: $font-weight-medium;
+            color: $color-default;
+        }
+    }
+
     &-animated {
         position: relative;
         height: 40px;
@@ -67,7 +102,7 @@ button {
         }
 
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
             top: 0;
@@ -79,7 +114,7 @@ button {
         }
 
         &::after {
-            content: "";
+            content: '';
             border-radius: 4px;
             background-color: $color-default;
             opacity: 0.7;
@@ -144,5 +179,16 @@ button {
     &:hover {
         transform: translate(4px, -4px);
         // box-shadow: -8px 8px 0 $color-default;
+    }
+}
+
+.card2 {
+    background-color: $color-white;
+    box-shadow: -2px 2px 16px $color-default-transparent;
+
+    transition: transform 200ms ease-in-out;
+
+    &:hover {
+        transform: translate(4px, -4px);
     }
 }

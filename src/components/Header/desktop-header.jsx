@@ -1,22 +1,22 @@
-import React from "react";
+import React from 'react';
 
-import CalculatorsDropdown from "./Dropdowns/CalculatorsDropdown";
-import SavedDropdown from "./Dropdowns/SavedDropdown";
-import SearchDropdown from "./Dropdowns/SearchDropdown";
+import CalculatorsDropdown from './Dropdowns/CalculatorsDropdown';
+import SavedDropdown from './Dropdowns/SavedDropdown';
+import SearchDropdown from './Dropdowns/SearchDropdown';
 
-import SavedButton from "./Buttons/saved-button";
-import SearchButton from "./Buttons/search-button";
-import CalculatorsButton from "./Buttons/calculators-button";
-import MobileMenu from "./Mobile/mobile-menu";
-import MenuButton from "./Buttons/menu-button";
+import SavedButton from './Buttons/saved-button';
+import SearchButton from './Buttons/search-button';
+import CalculatorsButton from './Buttons/calculators-button';
+import MobileMenu from './Mobile/mobile-menu';
+import MenuButton from './Buttons/menu-button';
 
 export function handleToggleHamburgerMenu(open) {
-    let menu = document.getElementById("mobile-header-menu");
-    menu.style["transform"] = open ? "translate(0)" : "translate(120%)";
+    let menu = document.getElementById('mobile-header-menu');
+    menu.style['transform'] = open ? 'translate(0)' : 'translate(120%)';
 
-    let background = document.getElementById("mobile-header-background");
-    background.style["transform"] = open ? "scale(1)" : "scale(0)";
-    background.style["opacity"] = open ? "1" : "0";
+    let background = document.getElementById('mobile-header-background');
+    background.style['transform'] = open ? 'scale(1)' : 'scale(0)';
+    background.style['opacity'] = open ? '1' : '0';
 }
 
 const DesktopHeader = () => {
@@ -54,7 +54,8 @@ const DesktopHeader = () => {
                     <SearchButton />
                     <SearchDropdown />
                 </li>
-                <li className="header-bar__item header-bar__item-icon">
+
+                <li className="header-bar__item header-bar__item-icon header-saved">
                     <SavedButton />
                     <SavedDropdown />
                 </li>

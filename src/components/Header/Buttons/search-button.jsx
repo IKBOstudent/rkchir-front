@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const SearchButton = () => {
     return (
@@ -11,11 +11,14 @@ const SearchButton = () => {
                 role="img"
                 aria-hidden="true"
                 strokeWidth="1.5"
-                width="24"
-            >
+                width="24">
                 <title>Search Icon</title>
 
-                <circle cx="9.813" cy="9.812" r="9.063" transform="rotate(-23.025 9.813 9.812)"></circle>
+                <circle
+                    cx="9.813"
+                    cy="9.812"
+                    r="9.063"
+                    transform="rotate(-23.025 9.813 9.812)"></circle>
                 <path d="M16.221 16.22l7.029 7.03"></path>
             </svg>
         </button>

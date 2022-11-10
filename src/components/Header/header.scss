@@ -1,11 +1,11 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 header {
     display: block;
     position: sticky;
     top: 0;
     background-color: $color-white;
-    box-shadow: 0 1px 0 0 $color-default;
+    box-shadow: 0 0px 12px 1px $color-default-transparent;
 
     z-index: 3;
 }
@@ -136,8 +136,8 @@ header {
                 position: absolute;
                 top: 4rem;
                 background-color: $color-white;
-                box-shadow: 0 0 20px 10px rgb(0 0 0 / 14%);
-                border-radius: 2px;
+                box-shadow: 0 0 0 1px $color-default;
+                /* border-radius: 2px; */
                 transition: $standard-transition;
             }
 

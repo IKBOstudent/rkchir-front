@@ -2,7 +2,7 @@ import React from 'react';
 
 const SavedDropdown = () => {
     return (
-        <div aria-hidden="false" className="header-bar__item-icon-menu">
+        <div id="saved-dropdown" aria-hidden="false" className="header-bar__item-icon-menu">
             <div className="header-bar__item-icon-menu-content">
                 <h3>Saved products (2)</h3>
                 <ul>
