@@ -21,7 +21,11 @@
 
             font-size: $font-size-medium;
 
+            h3 {
+                pointer-events: none;
+            }
             svg {
+                pointer-events: none;
                 height: 20px;
                 stroke: $color-default;
             }

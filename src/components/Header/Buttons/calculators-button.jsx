@@ -6,7 +6,7 @@ const CalculatorsButton = () => {
     }
 
     const clickedOutside = (event) => {
-        if (!event.target.closest('.header-bar__item-calc')) {
+        if (event.target.id !== 'button-calc') {
             let calc_menu = document.getElementById('calculators-menu');
             if (calc_menu.style.display === 'block') {
                 calc_menu.style.display = 'none';
@@ -23,9 +23,14 @@ const CalculatorsButton = () => {
     }, []);
 
     return (
-        <button type="button" className="header-bar__item-link" onClick={handleToggleCalcMenu}>
-            <span>Calculators</span>
+        <button
+            id="button-calc"
+            type="button"
+            className="header-bar__item-link"
+            onClick={handleToggleCalcMenu}>
+            <span style={{ pointerEvents: 'none' }}>Calculators</span>
             <svg
+                style={{ pointerEvents: 'none' }}
                 viewBox="0 0 8 8"
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"

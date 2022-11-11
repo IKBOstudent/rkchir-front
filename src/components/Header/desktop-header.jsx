@@ -9,6 +9,7 @@ import SearchButton from './Buttons/search-button';
 import CalculatorsButton from './Buttons/calculators-button';
 import MobileMenu from './Mobile/mobile-menu';
 import MenuButton from './Buttons/menu-button';
+import { Link } from 'react-router-dom';
 
 export function handleToggleHamburgerMenu(open) {
     let menu = document.getElementById('mobile-header-menu');
@@ -24,25 +25,25 @@ const DesktopHeader = () => {
         <div className="desktop-header">
             <ul className="header-bar">
                 <li className="header-bar__item header-logo">
-                    <a href="/" className="header-bar__item-link">
+                    <Link to="/" className="header-bar__item-link">
                         <span>PC_PARTS</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="header-bar__item">
-                    <a href="/" className="header-bar__item-link">
+                    <Link to="/" className="header-bar__item-link">
                         <span>Home</span>
-                    </a>
+                    </Link>
                 </li>
                 <li className="header-bar__item">
-                    <a href="/catalog" className="header-bar__item-link">
+                    <Link to="/catalog" className="header-bar__item-link">
                         <span>Catalog</span>
-                    </a>
+                    </Link>
                 </li>
 
                 <li className="header-bar__item">
-                    <a href="/configure" className="header-bar__item-link">
+                    <Link to="/configure" className="header-bar__item-link">
                         <span>Configure</span>
-                    </a>
+                    </Link>
                 </li>
 
                 <li className="header-bar__item header-bar__item-calc">
@@ -66,11 +67,11 @@ const DesktopHeader = () => {
                 </li>
 
                 <li className="header-bar__item header-register">
-                    <a href="/register">
+                    <Link to="/register">
                         <button type="button" className="button-animated">
                             <span>Sign up</span>
                         </button>
-                    </a>
+                    </Link>
                 </li>
             </ul>
         </div>

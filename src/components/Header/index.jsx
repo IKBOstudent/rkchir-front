@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import "./header.scss";
-import DesktopHeader from "./desktop-header";
+import './header.scss';
+import DesktopHeader from './desktop-header';
 
 const Header = () => {
     return (

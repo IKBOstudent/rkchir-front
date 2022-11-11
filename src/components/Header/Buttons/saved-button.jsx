@@ -6,7 +6,7 @@ const SavedButton = () => {
     }
 
     const clickedOutside = (event) => {
-        if (!event.target.closest('.header-saved')) {
+        if (event.target.id !== 'button-saved') {
             let saved = document.getElementById('saved-dropdown');
             if (saved.style.display === 'block') {
                 saved.style.display = 'none';
@@ -23,8 +23,9 @@ const SavedButton = () => {
     }, []);
 
     return (
-        <button type="button" className="button-icon" onClick={handleToggleSaved}>
+        <button id="button-saved" type="button" className="button-icon" onClick={handleToggleSaved}>
             <svg
+                style={{ pointerEvents: 'none' }}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="none"

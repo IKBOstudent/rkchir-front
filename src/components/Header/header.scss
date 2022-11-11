@@ -6,7 +6,7 @@ header {
     top: 0;
     background-color: $color-white;
     box-shadow: 0 0px 12px 1px $color-default-transparent;
-
+    transition: 200ms;
     z-index: 3;
 }
 
@@ -100,21 +100,6 @@ header {
 
             &.header-menu {
                 display: none;
-            }
-
-            &.header-register {
-                button {
-                    animation-timing-function: ease-in-out;
-                }
-
-                @keyframes bounce-animation {
-                    from {
-                        box-shadow: 8px -8px 0 $color-default;
-                    }
-                    to {
-                        box-shadow: -8px 8px 0 $color-default;
-                    }
-                }
             }
 
             &-calc {

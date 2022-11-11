@@ -2,7 +2,7 @@ import React from 'react';
 
 import './menublock.scss';
 
-const MenuBlock = () => {
+const MenuBlock = ({ options, selectedOption, setOption }) => {
     return (
         <div className="configure-menu-container">
             <div className="configure-menu-buttons">
@@ -17,15 +17,15 @@ const MenuBlock = () => {
                         <title>Arrow Icon</title>
                         <path d="M7.066 1.5L4 6.099.934 1.5h6.132z"></path>
                     </svg>
-                    <select id="filter-form" defaultValue="CPU">
-                        <option value="CPU">CPU</option>
-                        <option value="Video Card">Video Card</option>
-                        <option value="Motherboard">Motherboard</option>
-                        <option value="CPU Cooling">CPU Cooling</option>
-                        <option value="RAM">RAM</option>
-                        <option value="Storage">Storage</option>
-                        <option value="Power Supply">Power Supply</option>
-                        <option value="Case">Case</option>
+                    <select
+                        id="filter-form"
+                        defaultValue={selectedOption}
+                        onChange={(event) => setOption(event.target.value)}>
+                        {options.map((item, id) => (
+                            <option key={id} value={id}>
+                                {item}
+                            </option>
+                        ))}
                     </select>
                 </div>
             </div>
