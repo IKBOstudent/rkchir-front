@@ -17,10 +17,16 @@ import ErrorPage from '@pages/ErrorPage';
 // origin pc, pc-builds, box.co.uk
 
 const App = () => {
-    const [captchaPassed, setCaptchaPassed] = React.useState(true);
+    const [captchaPassed, setCaptchaPassed] = React.useState(false);
+
+    React.useEffect(() => {
+        setCaptchaPassed(localStorage.getItem('isCaptcha'));
+    }, []);
 
     React.useEffect(() => {
         if (captchaPassed) {
+            localStorage.setItem('isCaptcha', true);
+
             const script = document.createElement('script');
             script.defer = true;
             script.src = './script.js';

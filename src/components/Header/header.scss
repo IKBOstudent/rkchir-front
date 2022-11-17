@@ -69,6 +69,17 @@ header {
                 }
             }
 
+            #button-account {
+                cursor: pointer;
+                img {
+                    pointer-events: none;
+                    height: 40px;
+                    position: relative;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+
             &.header-search {
                 margin-left: auto;
 
@@ -142,9 +153,32 @@ header {
                         align-items: flex-start;
                         row-gap: 1rem;
 
-                        span {
-                            color: $color-default;
-                            font-weight: $font-weight-bold;
+                        li {
+                            width: 100%;
+                            a {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                span {
+                                    color: $color-default;
+                                    font-weight: $font-weight-bold;
+                                }
+
+                                svg {
+                                    margin-right: 1rem;
+                                    stroke: $color-default;
+                                    stroke-width: 1.5px;
+                                    width: 24px;
+                                    fill: none;
+                                }
+
+                                button {
+                                    border-radius: 2px;
+                                    /* background-color: $color-default; */
+                                    width: 100%;
+                                    padding: 0.7rem;
+                                }
+                            }
                         }
                     }
                 }

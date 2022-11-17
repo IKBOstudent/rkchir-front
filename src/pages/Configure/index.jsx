@@ -24,9 +24,9 @@ const options = [
             'Case',
         ],
     },
-    { name: 'Peripherals', items: ['Monitor', 'Keyboard'] },
-    { name: 'Customization', items: ['Color', 'RGB'] },
-    { name: 'Other', items: [] },
+    { name: 'Peripherals', items: ['Monitor', 'Keyboard', 'Mouse'] },
+    { name: 'Customization', items: ['Glass Print', 'RGB'] },
+    { name: 'Other', items: ['OS', 'Office', 'Antivirus'] },
 ];
 
 const Configure = () => {

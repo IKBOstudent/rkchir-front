@@ -1,10 +1,10 @@
 import React from 'react';
 
 import CalculatorsDropdown from './Dropdowns/CalculatorsDropdown';
-import SavedDropdown from './Dropdowns/SavedDropdown';
+import AccountDropdown from './Dropdowns/AccountDropdown';
 import SearchDropdown from './Dropdowns/SearchDropdown';
 
-import SavedButton from './Buttons/saved-button';
+import AccountButton from './Buttons/account-button';
 import SearchButton from './Buttons/search-button';
 import CalculatorsButton from './Buttons/calculators-button';
 import MobileMenu from './Mobile/mobile-menu';
@@ -56,9 +56,9 @@ const DesktopHeader = () => {
                     <SearchDropdown />
                 </li>
 
-                <li className="header-bar__item header-bar__item-icon header-saved">
-                    <SavedButton />
-                    <SavedDropdown />
+                <li className="header-bar__item header-bar__item-icon header-account">
+                    <AccountButton />
+                    <AccountDropdown />
                 </li>
 
                 <li className="header-bar__item header-bar__item-icon header-menu">
