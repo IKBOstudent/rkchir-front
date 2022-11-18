@@ -1,26 +1,26 @@
-import React from 'react';
+import React from "react";
 
-import account_img from '@assets/1.jpg';
+import account_img from "@assets/account.png";
 
 const AccountButton = () => {
     function handleToggleAccount() {
-        document.getElementById('account-dropdown').style.display = 'block';
+        document.getElementById("account-dropdown").style.display = "block";
     }
 
-    const clickedOutside = (event) => {
-        if (event.target.id !== 'button-account') {
-            let account = document.getElementById('account-dropdown');
-            if (account.style.display === 'block') {
-                account.style.display = 'none';
+    const clickedOutside = event => {
+        if (event.target.id !== "button-account") {
+            let account = document.getElementById("account-dropdown");
+            if (account.style.display === "block") {
+                account.style.display = "none";
             }
         }
     };
 
     React.useEffect(() => {
-        document.addEventListener('click', clickedOutside);
+        document.addEventListener("click", clickedOutside);
 
         return () => {
-            document.removeEventListener('click', clickedOutside);
+            document.removeEventListener("click", clickedOutside);
         };
     }, []);
 

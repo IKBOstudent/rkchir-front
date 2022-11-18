@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 header {
     display: block;
@@ -71,12 +71,16 @@ header {
 
             #button-account {
                 cursor: pointer;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                border: 1.5px solid #33333312;
+                overflow: hidden;
                 img {
                     pointer-events: none;
-                    height: 40px;
-                    position: relative;
-                    border-radius: 50%;
                     object-fit: cover;
+                    width: 100%;
+                    height: 100%;
                 }
             }
 
@@ -174,9 +178,13 @@ header {
 
                                 button {
                                     border-radius: 2px;
-                                    /* background-color: $color-default; */
                                     width: 100%;
                                     padding: 0.7rem;
+
+                                    span {
+                                        font-size: 1rem;
+                                        font-weight: $font-weight-bold;
+                                    }
                                 }
                             }
                         }
