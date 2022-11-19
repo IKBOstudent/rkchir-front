@@ -6,7 +6,6 @@ import Header from '@components/Header';
 import Footer from '@components/Footer';
 
 import ProductsBlock from './ProductsBlock';
-import Filters from './Filters';
 
 const Catalog = () => {
     return (
@@ -14,9 +13,6 @@ const Catalog = () => {
             <Header />
             <main>
                 <article className="catalog-container">
-                    <section className="catalog-filters">
-                        <Filters />
-                    </section>
                     <section className="catalog-content">
                         <ProductsBlock />
                     </section>

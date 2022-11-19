@@ -1,15 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import "./cart.scss";
+import './cart.scss';
 
-import Header from "@components/Header";
-import Footer from "@components/Footer";
+import Header from '@components/Header';
+import Footer from '@components/Footer';
+
+import img_pc2 from '@assets/intel_i5.png';
 
 const Cart = () => {
     React.useEffect(() => {
-        const script = document.createElement("script");
+        const script = document.createElement('script');
         script.defer = true;
-        script.src = "./cart_script.js";
+        script.src = './cart_script.js';
 
         document.body.appendChild(script);
 
@@ -24,29 +26,54 @@ const Cart = () => {
             <main>
                 <article className="cart-container">
                     <h1>Your cart</h1>
+
                     <ul className="cart-items">
                         <li className="cart-items__item">
-                            <h3>Name 1</h3>
-                            <div>
-                                <button className="button-shop">-</button>
-                                <h4>0</h4>
-                                <button className="button-shop">+</button>
-                                <button className="button-default">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 23 24"
-                                        fill="none"
-                                        role="img"
-                                        aria-hidden="true"
-                                        strokeWidth="2"
-                                        width="24"
-                                    >
-                                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path>
-                                    </svg>
-                                </button>
+                            <img src={img_pc2} alt="item" />
+                            <div className="cart-items__item-content">
+                                <div className="cart_left">
+                                    <div>
+                                        <h3>Name 1</h3>
+                                        <small>Pay 0% APR for 12 months:</small>
+                                    </div>
+
+                                    <div>
+                                        <h4>$201.99</h4>
+                                        <button className="button-clear">Remove</button>
+                                    </div>
+                                </div>
+
+                                <div className="cart_right">
+                                    <button className="button-shop">-</button>
+                                    <h4>0</h4>
+                                    <button className="button-shop">+</button>
+                                </div>
                             </div>
                         </li>
                     </ul>
+
+                    <section className="cart-total">
+                        <div>
+                            <span>Subtotal</span>
+                            <span>$1,499.00</span>
+                        </div>
+
+                        <div>
+                            <span>Shipping</span>
+                            <span>FREE</span>
+                        </div>
+
+                        <div>
+                            <h2>Total</h2>
+                            <h2>$1,499.00</h2>
+                        </div>
+
+                        <div>
+                            <button className="button-animated">
+                                <span>CHECKOUT</span>
+                            </button>
+                        </div>
+                    </section>
                 </article>
             </main>
             <Footer />

@@ -20,15 +20,6 @@ const ProductsBlock = () => {
     return (
         <div id="products-block" className="products-container">
             <h2>Explore products</h2>
-
-            <div className="products-box">
-                <h3>products 1</h3>
-                <div className="products-box-grid">
-                    {[1, 2, 3].map((item, id) => (
-                        <ProductCard key={id} />
-                    ))}
-                </div>
-            </div>
             <div className="products-box">
                 <h3>Peripherals</h3>
                 <div className="products-box-photoGrid">

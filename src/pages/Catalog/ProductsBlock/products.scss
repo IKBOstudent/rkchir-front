@@ -14,23 +14,12 @@
         flex-direction: column;
         row-gap: 2rem;
 
-        &-grid {
-            position: relative;
-
-            display: grid;
-            grid-template-columns: repeat(12, minmax(0, 1fr));
-            column-gap: 2rem;
-            row-gap: 3rem;
-        }
-
         &-photoGrid {
-            display: grid;
+            justify-content: center;
+            display: flex;
 
-            // max-width: 100%;
-            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-            grid-template-rows: minmax(100px, auto);
             gap: 1rem;
-            grid-auto-flow: dense;
+            flex-wrap: wrap;
 
             &__item {
                 cursor: pointer;

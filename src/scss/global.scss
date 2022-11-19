@@ -11,6 +11,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 ul,
 ol,
 li,
@@ -26,11 +28,22 @@ li {
 }
 
 button {
+    font-family: inherit;
     background: none;
     border: none;
+
+    &:active,
+    &:focus {
+        -webkit-tap-highlight-color: transparent;
+    }
 }
 
 .button {
+    &-disabled {
+        pointer-events: none;
+        background-color: #cccccc !important;
+    }
+
     &-default {
         position: relative;
         height: 40px;
