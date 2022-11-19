@@ -35,13 +35,13 @@ const AccountDropdown = () => {
                         </a>
                     </li>
                     <li style={{ borderTop: '1px solid', paddingTop: 10 }}>
-                        <a href="/cart">
+                        <Link to="/cart">
                             <button className="button-shop">
                                 <span>
                                     Cart <small>(4)</small>
                                 </span>
                             </button>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
