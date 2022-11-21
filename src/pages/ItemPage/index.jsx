@@ -17,11 +17,13 @@ const ItemPage = () => {
                         <div className="item-img">
                             <img src={img_pc2} alt="item" />
                             <ul>
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
-                                <li>5</li>
+                                <li>
+                                    <img src={img_pc2} alt="item" />
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
                             </ul>
                         </div>
 

@@ -5,6 +5,9 @@ import "./calculator-bottleneck.scss";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 
+import img_intel_i5 from "@assets/intel_i5.png";
+// import img_videocard from "@assets/videocard1.jpg";
+
 const CalculatorBottleneck = () => {
     return (
         <>
@@ -14,7 +17,9 @@ const CalculatorBottleneck = () => {
                     <section>
                         <form>
                             <div className="calc-select-box">
-                                <div className="calc-select-box__img"></div>
+                                <div className="calc-select-box__img">
+                                    <img src={img_intel_i5} alt="" />
+                                </div>
                                 <div className="calc-select-box__main">
                                     <span>Processor</span>
                                     <select id="">
@@ -27,7 +32,9 @@ const CalculatorBottleneck = () => {
                                 </div>
                             </div>
                             <div className="calc-select-box">
-                                <div className="calc-select-box__img"></div>
+                                <div className="calc-select-box__img">
+                                    <img src={img_intel_i5} alt="" />
+                                </div>
                                 <div className="calc-select-box__main">
                                     <span>Graphic card</span>
                                     <select id="">
@@ -40,7 +47,9 @@ const CalculatorBottleneck = () => {
                                 </div>
                             </div>
                             <div className="calc-select-box">
-                                <div className="calc-select-box__img"></div>
+                                <div className="calc-select-box__img">
+                                    <img src={img_intel_i5} alt="" />
+                                </div>
                                 <div className="calc-select-box__main">
                                     <span>Screen resolution</span>
                                     <select id="">

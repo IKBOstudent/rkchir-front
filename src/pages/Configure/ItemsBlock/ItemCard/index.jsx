@@ -3,8 +3,9 @@ import React from "react";
 import "./item-card.scss";
 
 import intel_i5 from "@assets/intel_i5.png";
+import { Link } from "react-router-dom";
 
-const ItemCard = ({ name }) => {
+const ItemCard = ({ name, id }) => {
     function truncate(str, maxLen = 16) {
         str = str.trim();
         str = str.length > maxLen ? str.slice(0, maxLen - 3) + "..." : str;
@@ -20,14 +21,14 @@ const ItemCard = ({ name }) => {
 
     return (
         <div className="item-card card">
-            <a href="#">
+            <Link to={"/item/000" + id}>
                 <div>
                     <h3>{name}</h3>
                     <span className="trunc"></span>
                 </div>
 
                 <h2>$299.00</h2>
-            </a>
+            </Link>
 
             <div className="item-card-img" style={{ backgroundImage: `url(${intel_i5})` }}></div>
 

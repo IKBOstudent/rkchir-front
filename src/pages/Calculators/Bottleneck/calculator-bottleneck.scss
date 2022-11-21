@@ -16,7 +16,7 @@ main {
 
         form {
             display: grid;
-            grid-template-columns: repeat(2, minmax(200px, 1fr));
+            grid-template-columns: repeat(2, minmax(auto, 1fr));
             gap: 2rem;
 
             .calc-select-box {
@@ -32,7 +32,11 @@ main {
                 box-shadow: 0 0 20px 10px rgb(0 0 0 / 14%);
 
                 &__img {
-                    width: 20%;
+                    display: flex;
+                    img {
+                        margin: auto;
+                        width: 160px;
+                    }
                     // background-color: $color-primary-transparent;
                 }
 
@@ -67,11 +71,12 @@ main {
                 padding: 2rem;
 
                 &-card {
+                    box-sizing: border-box;
                     cursor: pointer;
                     border-radius: 2px;
                     padding: 1rem;
                     height: 140px;
-                    width: 100px;
+                    width: 100%;
 
                     transition: $standard-transition;
                     &:hover {
@@ -90,13 +95,6 @@ main {
         &-container {
             padding-left: 4rem;
             padding-right: 4rem;
-        }
-    }
-
-    @media only screen and (max-width: 767px) {
-        &-container {
-            padding-left: 2rem;
-            padding-right: 2rem;
 
             form {
                 .calc-select-box {
@@ -109,6 +107,36 @@ main {
 
                 button {
                     grid-column: span 2;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 767px) {
+        &-container {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 560px) {
+        &-container {
+            form {
+                .calc-select-box {
+                    flex-direction: column;
+
+                    &__img {
+                        display: flex;
+                        img {
+                            margin: auto;
+                            width: 160px;
+                            padding-top: 20px;
+                        }
+                    }
+                }
+
+                .calc-select-boxLast {
+                    flex-direction: column;
                 }
             }
         }

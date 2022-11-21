@@ -1,17 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import './signup.scss';
+import "./signup.scss";
 
 const ArrowIcon = () => {
     return (
-        <svg
-            width="20"
-            height="15"
-            viewBox="0 0 24 19"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            strokeWidth="2">
+        <svg width="20" height="15" viewBox="0 0 24 19" fill="none" xmlns="http://www.w3.org/2000/svg" strokeWidth="2">
             <path d="M14 18L8 12L14 6" />
         </svg>
     );
@@ -21,13 +15,13 @@ const SignUp = () => {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const nameInput = document.getElementById('signup-text');
-        const emailInput = document.getElementById('signup-email');
-        const passwordInput = document.getElementById('signup-password');
-        const rememberInput = document.getElementById('signup-checkbox');
-        const submitBtn = document.getElementById('signup-submit');
+        const nameInput = document.getElementById("signup-text");
+        const emailInput = document.getElementById("signup-email");
+        const passwordInput = document.getElementById("signup-password");
+        const rememberInput = document.getElementById("signup-checkbox");
+        const submitBtn = document.getElementById("signup-submit");
 
-        console.log('submit');
+        console.log("submit");
         const payload = {
             name: nameInput.value.trim(),
             email: emailInput.value,
@@ -41,36 +35,36 @@ const SignUp = () => {
 
         let good = true;
         if (payload.name.length < 4) {
-            textDiv.className = 'signup-form-input2';
-            textDiv.lastChild.textContent = 'Too short name!';
+            textDiv.className = "signup-form-input2";
+            textDiv.lastChild.textContent = "Too short name!";
             good = false;
         } else {
-            textDiv.className = 'signup-form-input';
-            textDiv.lastChild.textContent = 'Name';
+            textDiv.className = "signup-form-input";
+            textDiv.lastChild.textContent = "Name";
         }
 
         if (!payload.email.match(/\w+@\w+\.\w+/)) {
-            emailDiv.className = 'signup-form-input2';
-            emailDiv.lastChild.textContent = 'Invalid email!';
+            emailDiv.className = "signup-form-input2";
+            emailDiv.lastChild.textContent = "Invalid email!";
             good = false;
         } else {
-            emailDiv.className = 'signup-form-input';
-            emailDiv.lastChild.textContent = 'Email';
+            emailDiv.className = "signup-form-input";
+            emailDiv.lastChild.textContent = "Email";
         }
 
         if (payload.password.length < 6) {
-            passwordDiv.className = 'signup-form-input2';
-            passwordDiv.lastChild.textContent = 'Too short password!';
+            passwordDiv.className = "signup-form-input2";
+            passwordDiv.lastChild.textContent = "Too short password!";
             good = false;
         } else {
-            passwordDiv.className = 'signup-form-input';
-            passwordDiv.lastChild.textContent = 'Password';
+            passwordDiv.className = "signup-form-input";
+            passwordDiv.lastChild.textContent = "Password";
         }
 
         if (good) {
             console.log(payload);
-            submitBtn.style.backgroundColor = '#c4c4c4';
-            submitBtn.style.pointerEvents = 'none';
+            submitBtn.style.backgroundColor = "#c4c4c4";
+            submitBtn.style.pointerEvents = "none";
         }
     }
 
@@ -89,13 +83,7 @@ const SignUp = () => {
             <section>
                 <form className="signup-form" noValidate onSubmit={handleSubmit}>
                     <div className="signup-form-input">
-                        <input
-                            id="signup-text"
-                            type="text"
-                            className="form-name"
-                            placeholder="Ivan"
-                            required
-                        />
+                        <input id="signup-text" type="text" className="form-name" placeholder="Ivan" required />
                         <label htmlFor="signup-text">Name</label>
                     </div>
 
@@ -120,9 +108,6 @@ const SignUp = () => {
                         />
                         <label htmlFor="signup-password">Password</label>
                     </div>
-                    <div className="signup-form-forgot">
-                        <a href="#">Forgot password?</a>
-                    </div>
 
                     <div className="signup-form-checkbox">
                         <input id="signup-checkbox" type="checkbox" value="check" />
@@ -141,7 +126,7 @@ const SignUp = () => {
             </section>
 
             <section className="signup-link-login">
-                Already have an account? <a href="#">Log in</a>
+                Already have an account? <Link to="/login">Log in</Link>
             </section>
         </main>
     );
