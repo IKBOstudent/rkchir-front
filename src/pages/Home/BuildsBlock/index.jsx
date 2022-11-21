@@ -16,7 +16,7 @@ const BuildsBlock = () => {
 
             <div className="builds-box-grid">
                 {images.map((item, id) => (
-                    <BuildCard key={id} image_url={item} />
+                    <BuildCard key={id} id={id} image_url={item} />
                 ))}
             </div>
         </div>

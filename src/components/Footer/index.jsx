@@ -39,12 +39,6 @@ const Footer = () => {
                             <SocialIcon icon={1} />
                             <SocialIcon icon={2} />
                         </div>
-
-                        <ul>
-                            <li>First</li>
-                            <li>Second</li>
-                            <li>Third</li>
-                        </ul>
                     </div>
                     <div className="footer-mainSection-right">
                         <h3>FOOTER CONTENT RIGHT</h3>
