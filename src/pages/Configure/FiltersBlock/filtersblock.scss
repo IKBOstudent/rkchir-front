@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .filters {
     &-container {
@@ -8,9 +8,11 @@
         display: flex;
         flex-direction: column;
 
-        &__item {
-            cursor: pointer;
+        li {
+        }
 
+        &__button {
+            cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -28,6 +30,27 @@
                 pointer-events: none;
                 height: 20px;
                 stroke: $color-default;
+            }
+        }
+
+        &__dropdown {
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                input,
+                label {
+                    font-size: large;
+                }
+
+                input[type="number"] {
+                    box-sizing: border-box;
+                    width: 100%;
+                }
             }
         }
     }

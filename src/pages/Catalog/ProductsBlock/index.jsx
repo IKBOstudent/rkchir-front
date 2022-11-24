@@ -1,21 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import ProductCard from './ProductCard';
+import ProductCard from "./ProductCard";
 
-import './products.scss';
+import "./products.scss";
 
-import monitor from '@assets/monitor.png';
-import mouse from '@assets/mouse.png';
-import keyboard from '@assets/keyboard.png';
-import headphones from '@assets/headphones.png';
-import webcam from '@assets/webcam.png';
-import mic from '@assets/mic.png';
-import mat from '@assets/mat.png';
+import monitor from "@assets/monitor.png";
+import mouse from "@assets/mouse.png";
+import keyboard from "@assets/keyboard.png";
+import headphones from "@assets/headphones.png";
+import webcam from "@assets/webcam.png";
+import mic from "@assets/mic.png";
+import mat from "@assets/mat.png";
 
 const ProductsBlock = () => {
     // const images = [img_intel_i7, img_intel_i5, img_intel_i9, img_intel_i7, img_intel_i9, img_intel_i5, img_intel_i7];
 
-    const images = [monitor, webcam, mouse, headphones, keyboard, mat, mic];
+    // const images = [monitor, webcam, mouse, headphones, keyboard, mat, mic];
+    const images = [];
 
     return (
         <div id="products-block" className="products-container">

@@ -1,10 +1,10 @@
-import React from 'react';
-import CloseMenuButton from '../Buttons/close-menu-button';
+import React from "react";
+import CloseMenuButton from "../Buttons/close-menu-button";
 
-import './mobile-header.scss';
+import "./mobile-header.scss";
 
-import { handleToggleHamburgerMenu } from '../desktop-header';
-import { Link } from 'react-router-dom';
+import { handleToggleHamburgerMenu } from "../desktop-header";
+import { Link } from "react-router-dom";
 
 const MobileMenu = () => {
     return (
@@ -12,10 +12,13 @@ const MobileMenu = () => {
             <div
                 className="mobile-header-background"
                 id="mobile-header-background"
-                onClick={() => handleToggleHamburgerMenu(false)}></div>
+                onClick={() => handleToggleHamburgerMenu(false)}
+            ></div>
             <div className="mobile-header-menu" id="mobile-header-menu">
                 <div className="mobile-header-menu-top">
-                    <CloseMenuButton />
+                    <button type="button" className="button-icon" onClick={() => handleToggleHamburgerMenu(false)}>
+                        <CloseMenuButton />
+                    </button>
                 </div>
                 <ul>
                     <li className="mobile-header__item">

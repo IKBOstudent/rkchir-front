@@ -1,4 +1,4 @@
-@import '@styles/variables';
+@import "@styles/variables";
 
 .configure-menu {
     &-container {
@@ -83,17 +83,35 @@
         align-self: flex-end;
 
         label {
+            position: relative;
+            display: flex;
+            align-items: center;
             font-size: $font-size-medium;
         }
 
         select {
-            padding: 0 0.5rem;
+            appearance: none;
+            width: fit-content;
+            padding: 6px;
             cursor: pointer;
 
             font-size: $font-size-medium;
             font-family: inherit;
-            border: none;
+            // border: none;
             outline: none;
+            margin-left: 10px;
+            width: 115px;
+        }
+
+        button {
+            margin-top: 3px;
+            cursor: pointer;
+            position: absolute;
+            right: 15px;
+
+            svg {
+                transition: 200ms ease;
+            }
         }
     }
 

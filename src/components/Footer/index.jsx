@@ -28,6 +28,18 @@ const SocialIcon = ({ icon }) => {
 };
 
 const Footer = () => {
+    // React.useEffect(() => {
+    //     const script = document.createElement("script");
+    //     // script.defer = true;
+    //     script.src = "./ul_script.js";
+
+    //     document.body.appendChild(script);
+
+    //     return () => {
+    //         document.body.removeChild(script);
+    //     };
+    // }, []);
+
     return (
         <footer>
             <article className="footer-container">
@@ -40,11 +52,7 @@ const Footer = () => {
                             <SocialIcon icon={2} />
                         </div>
 
-                        <ul>
-                            <li>First</li>
-                            <li>Second</li>
-                            <li>Third</li>
-                        </ul>
+                        <ul id="id_for_script"></ul>
                     </div>
                     <div className="footer-mainSection-right">
                         <h3>FOOTER CONTENT RIGHT</h3>

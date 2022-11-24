@@ -2,34 +2,19 @@ import React from "react";
 
 import "./item-card.scss";
 
-import intel_i5 from "@assets/intel_i5.png";
-
-const ItemCard = ({ name }) => {
-    function truncate(str, maxLen = 16) {
-        str = str.trim();
-        str = str.length > maxLen ? str.slice(0, maxLen - 3) + "..." : str;
-        return str;
-    }
-
-    React.useEffect(() => {
-        const items = document.querySelectorAll(".trunc");
-        for (const i of items) {
-            i.textContent = truncate("Some text larger than");
-        }
-    }, []);
-
+const ItemCard = ({ content }) => {
     return (
         <div className="item-card card">
             <a href="#">
                 <div>
-                    <h3>{name}</h3>
-                    <span className="trunc"></span>
+                    <h3>{content?.name}</h3>
+                    <span className="trunc">{"Some text"}</span>
                 </div>
 
-                <h2>$299.00</h2>
+                <h2>{`$ ${content?.price.toFixed(2)}`}</h2>
             </a>
 
-            <div className="item-card-img" style={{ backgroundImage: `url(${intel_i5})` }}></div>
+            <div className="item-card-img" style={{ backgroundImage: `url(${content?.imgUrl})` }}></div>
 
             <ul className="item-card-buttons">
                 <li style={{ "--delay": 1 }}>
