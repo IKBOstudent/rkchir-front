@@ -5,9 +5,26 @@ import "./item-page.scss";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 
-import img_pc2 from "@assets/img_pc2.png";
+import img_pc1_front from "@assets/img_pc1.png";
+import img_pc1_top from "@assets/img_pc1_top.png";
+import img_pc1_side from "@assets/img_pc1_side.png";
+import img_pc1_back from "@assets/img_pc1_back.png";
 
 const ItemPage = () => {
+    const images = [img_pc1_front, img_pc1_top, img_pc1_side, img_pc1_back];
+
+    function handleClickImage(event, id) {
+        const selected = images[id];
+        const current = document.getElementById("selected-image");
+        current.src = selected;
+        const ul_children = event.target.parentElement.children;
+        for (let li of ul_children) {
+            li.classList.remove("current-image");
+            if (li === event.target) {
+                li.classList.add("current-image");
+            }
+        }
+    }
     return (
         <>
             <Header />
@@ -15,15 +32,20 @@ const ItemPage = () => {
                 <article className="item-container">
                     <div className="item-box">
                         <div className="item-img">
-                            <img src={img_pc2} alt="item" />
+                            <div>
+                                <img id="selected-image" src={images[0]} alt="item" />
+                            </div>
                             <ul>
-                                <li>
-                                    <img src={img_pc2} alt="item" />
-                                </li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
+                                {images.map((item, id) => (
+                                    <li
+                                        key={id}
+                                        onClick={event => {
+                                            handleClickImage(event, id);
+                                        }}
+                                    >
+                                        <img src={item} alt="item" />
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 

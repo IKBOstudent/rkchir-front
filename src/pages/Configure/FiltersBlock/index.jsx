@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 
-import './filtersblock.scss';
+import "./filtersblock.scss";
 
 const ArrowIcon = () => {
     return (
@@ -10,24 +10,51 @@ const ArrowIcon = () => {
     );
 };
 
+function onMoveSlider(event) {
+    console.log(event);
+    const slider = document.getElementById("slider");
+    console.dir(slider);
+    // console.log(event.offsetX);
+    // const max_pos = slider.parentElement.clientWidth;
+    // const new_pos = max_pos < event.offsetX ? max_pos : event.offsetX;
+    // console.log(new_pos);
+    // slider.style.left = new_pos + "px";
+}
+
+function stopSliding() {
+    console.log("removed listener from mousemove");
+    document.removeEventListener("mousemove", onMoveSlider);
+    console.log("removed listener from mouseup");
+    document.removeEventListener("mouseup", stopSliding);
+}
+
+function handleTapSlider(event) {
+    event.preventDefault();
+
+    console.log("added listener on mousemove");
+    document.addEventListener("mousemove", onMoveSlider);
+    console.log("added listener on mouseup");
+    document.addEventListener("mouseup", stopSliding);
+}
+
 const FiltersBlock = () => {
     const filters = {
-        Price: ['$100', '$200'],
-        Brand: ['AMD', 'Intel'],
+        Price: ["$100", "$200"],
+        Brand: ["AMD", "Intel"],
         Model: [
-            'AMD Ryzen 3',
-            'AMD Ryzen 5',
-            'AMD Ryzen 7',
-            'AMD Ryzen 9',
-            'Intel Core i3',
-            'Intel Core i5',
-            'Intel Core i7',
-            'Intel Core i9',
+            "AMD Ryzen 3",
+            "AMD Ryzen 5",
+            "AMD Ryzen 7",
+            "AMD Ryzen 9",
+            "Intel Core i3",
+            "Intel Core i5",
+            "Intel Core i7",
+            "Intel Core i9",
         ],
     };
 
     function handleClick(event) {
-        const filters = document.querySelectorAll('.filters-list__item');
+        const filters = document.querySelectorAll(".filters-list__item");
         // for (let f of filters) {
         //     if (f !== event.target) {
         //     }
@@ -43,6 +70,12 @@ const FiltersBlock = () => {
                         <ArrowIcon />
                     </li>
                 ))}
+                <li className="filters-slider">
+                    Range slider
+                    <div>
+                        <span id="slider" style={{ left: 0 }} onMouseDown={handleTapSlider}></span>
+                    </div>
+                </li>
             </ul>
         </div>
     );

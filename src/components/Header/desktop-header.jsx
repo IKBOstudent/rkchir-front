@@ -1,23 +1,23 @@
-import React from 'react';
+import React from "react";
 
-import CalculatorsDropdown from './Dropdowns/CalculatorsDropdown';
-import AccountDropdown from './Dropdowns/AccountDropdown';
-import SearchDropdown from './Dropdowns/SearchDropdown';
+import CalculatorsDropdown from "./Dropdowns/CalculatorsDropdown";
+import AccountDropdown from "./Dropdowns/AccountDropdown";
+import SearchDropdown from "./Dropdowns/SearchDropdown";
 
-import AccountButton from './Buttons/account-button';
-import SearchButton from './Buttons/search-button';
-import CalculatorsButton from './Buttons/calculators-button';
-import MobileMenu from './Mobile/mobile-menu';
-import MenuButton from './Buttons/menu-button';
-import { Link } from 'react-router-dom';
+import AccountButton from "./Buttons/account-button";
+import SearchButton from "./Buttons/search-button";
+import CalculatorsButton from "./Buttons/calculators-button";
+import MobileMenu from "./Mobile/mobile-menu";
+import MenuButton from "./Buttons/menu-button";
+import { Link } from "react-router-dom";
 
 export function handleToggleHamburgerMenu(open) {
-    let menu = document.getElementById('mobile-header-menu');
-    menu.style['transform'] = open ? 'translate(0)' : 'translate(120%)';
+    let menu = document.getElementById("mobile-header-menu");
+    menu.style["transform"] = open ? "translate(0)" : "translate(120%)";
 
-    let background = document.getElementById('mobile-header-background');
-    background.style['transform'] = open ? 'scale(1)' : 'scale(0)';
-    background.style['opacity'] = open ? '1' : '0';
+    let background = document.getElementById("mobile-header-background");
+    background.style["transform"] = open ? "scale(1)" : "scale(0)";
+    background.style["opacity"] = open ? "1" : "0";
 }
 
 const DesktopHeader = () => {
@@ -25,25 +25,25 @@ const DesktopHeader = () => {
         <div className="desktop-header">
             <ul className="header-bar">
                 <li className="header-bar__item header-logo">
-                    <Link to="/" className="header-bar__item-link">
+                    <a href="/" className="header-bar__item-link">
                         <span>PC_PARTS</span>
-                    </Link>
+                    </a>
                 </li>
                 <li className="header-bar__item">
-                    <Link to="/" className="header-bar__item-link">
+                    <a href="/" className="header-bar__item-link">
                         <span>Home</span>
-                    </Link>
+                    </a>
                 </li>
                 <li className="header-bar__item">
-                    <Link to="/catalog" className="header-bar__item-link">
+                    <a href="/catalog" className="header-bar__item-link">
                         <span>Catalog</span>
-                    </Link>
+                    </a>
                 </li>
 
                 <li className="header-bar__item">
-                    <Link to="/configure" className="header-bar__item-link">
+                    <a href="/configure" className="header-bar__item-link">
                         <span>Configure</span>
-                    </Link>
+                    </a>
                 </li>
 
                 <li className="header-bar__item header-bar__item-calc">
@@ -67,11 +67,11 @@ const DesktopHeader = () => {
                 </li>
 
                 <li className="header-bar__item header-register">
-                    <Link to="/register">
+                    <a href="/register">
                         <button type="button" className="button-animated">
                             <span>Sign up</span>
                         </button>
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </div>

@@ -5,13 +5,15 @@ import "./cart.scss";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 
-import img_pc2 from "@assets/intel_i5.png";
+import img_intel_i5 from "@assets/intel_i5.png";
+import img_intel_i7 from "@assets/intel_i7.png";
+import img_intel_i9 from "@assets/intel_i9.png";
 
 const initialState = [
-    { id: "0", value: "Name 1", count: 3 },
-    { id: "1", value: "Name 2", count: 5 },
-    { id: "2", value: "Name 3", count: 1 },
-    { id: "3", value: "Name 4", count: 2 },
+    { id: "1", imgURL: img_intel_i5, value: "Intel Core i5-12600K", price: 359, count: 3 },
+    { id: "2", imgURL: img_intel_i5, value: "Intel Core i5-11600K", price: 299, count: 2 },
+    { id: "3", imgURL: img_intel_i7, value: "Intel Core i7-12700K", price: 429, count: 1 },
+    { id: "4", imgURL: img_intel_i9, value: "Intel Core i9-12900K", price: 599, count: 1 },
 ];
 
 const Cart = () => {
@@ -32,17 +34,50 @@ const Cart = () => {
         );
     }
 
+    function handleDrop(event) {
+        event.preventDefault();
+        console.log(event);
+        const element = document.querySelector(".dragging");
+        console.log(element.dataset.id);
+        remove_item(element.dataset.id);
+
+        event.target.classList.remove("drop-target");
+    }
+
+    function handleDrag(event) {
+        event.target.classList.add("dragging");
+        // console.log(event);
+    }
+
     return (
         <>
             <Header />
             <main>
                 <article className="cart-container">
-                    <h1>Your cart</h1>
+                    <div className="cart-top">
+                        <h1>Your cart</h1>
+                        <span
+                            id="cart-trash"
+                            onDragOver={e => e.preventDefault()}
+                            onDrop={handleDrop}
+                            onDragEnter={event => event.target.classList.add("drop-target")}
+                            onDragLeave={event => event.target.classList.remove("drop-target")}
+                        >
+                            Trash
+                        </span>
+                    </div>
 
                     <ul className="cart-items">
-                        {items.map(item => (
-                            <li key={item.id} className="cart-items__item">
-                                <img src={img_pc2} alt="item" />
+                        {items.map((item, index) => (
+                            <li
+                                key={item.id}
+                                data-id={item.id}
+                                draggable
+                                className="cart-items__item"
+                                onDragStart={handleDrag}
+                                onDragEnd={event => event.target.classList.remove("dragging")}
+                            >
+                                <img src={item.imgURL} alt="item" />
                                 <div className="cart-items__item-content">
                                     <div className="cart_left">
                                         <div>
@@ -51,7 +86,7 @@ const Cart = () => {
                                         </div>
 
                                         <div>
-                                            <h4>$201.99</h4>
+                                            <h4>{"$" + item.price * item.count + ".00"}</h4>
                                             <button className="button-clear" onClick={() => remove_item(item.id)}>
                                                 Remove
                                             </button>
@@ -78,7 +113,9 @@ const Cart = () => {
                     <section className="cart-total">
                         <div>
                             <span>Subtotal</span>
-                            <span>$1,499.00</span>
+                            <span>
+                                {"$" + items.reduce((sum, item) => (sum += item.price * item.count), 0) + ".00"}
+                            </span>
                         </div>
 
                         <div>
@@ -88,7 +125,7 @@ const Cart = () => {
 
                         <div>
                             <h2>Total</h2>
-                            <h2>$1,499.00</h2>
+                            <h2>{"$" + items.reduce((sum, item) => (sum += item.price * item.count), 0) + ".00"}</h2>
                         </div>
 
                         <div>
