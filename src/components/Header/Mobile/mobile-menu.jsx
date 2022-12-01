@@ -49,12 +49,6 @@ const MobileMenu = () => {
                             <small>Check your CPU and GPU compatibility</small>
                         </Link>
                     </li>
-                    <li className="mobile-header__item">
-                        <Link to="/calculator-psu">
-                            <span>PSU Calculator</span>
-                            <small>Calculate Power Supply Unit wattage for your PC build</small>
-                        </Link>
-                    </li>
                 </ul>
             </div>
         </>

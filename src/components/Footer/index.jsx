@@ -39,8 +39,6 @@ const Footer = () => {
                             <SocialIcon icon={1} />
                             <SocialIcon icon={2} />
                         </div>
-
-                        <ul id="id_for_script"></ul>
                     </div>
                     <div className="footer-mainSection-right">
                         <h3>FOOTER CONTENT RIGHT</h3>

@@ -19,13 +19,14 @@
 
     &-menu {
         overflow-y: scroll;
+
         transform: translateX(120%);
 
         position: fixed;
         top: 0;
         right: 0;
         width: 200px;
-        height: 100vh;
+        height: 100%;
         z-index: 101;
         padding: 0 2rem;
 

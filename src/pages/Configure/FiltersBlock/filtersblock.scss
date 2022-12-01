@@ -54,4 +54,26 @@
             }
         }
     }
+
+    &-slider {
+        div {
+            margin-top: 20px;
+            height: 6px;
+            width: 100%;
+            background-color: #1510443a;
+            position: relative;
+            border-radius: 2px;
+
+            span {
+                left: 0;
+                cursor: pointer;
+                position: absolute;
+                height: 22px;
+                width: 10px;
+                top: -8px;
+                border-radius: 2px;
+                background-color: $color-primary;
+            }
+        }
+    }
 }

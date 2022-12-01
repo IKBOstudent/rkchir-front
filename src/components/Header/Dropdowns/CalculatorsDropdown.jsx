@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const CalculatorsDropdown = () => {
     return (
@@ -9,12 +9,6 @@ const CalculatorsDropdown = () => {
                     <Link to="/calculator-bottleneck">
                         <span>Bottleneck Calculator</span>
                         <small>Check your CPU and GPU compatibility</small>
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/calculator-psu">
-                        <span>PSU Calculator</span>
-                        <small>Calculate Power Supply Unit wattage for your PC build</small>
                     </Link>
                 </li>
             </ul>

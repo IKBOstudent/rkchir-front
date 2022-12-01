@@ -42,7 +42,7 @@ const AccountDropdown = () => {
                                     Cart <small>(4)</small>
                                 </span>
                             </button>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

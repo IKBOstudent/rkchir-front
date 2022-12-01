@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import './catalog.scss';
+import "./catalog.scss";
 
-import Header from '@components/Header';
-import Footer from '@components/Footer';
+import Header from "@components/Header";
+import Footer from "@components/Footer";
 
-import ProductsBlock from './ProductsBlock';
+import ProductsBlock from "./ProductsBlock";
 
 const Catalog = () => {
     return (

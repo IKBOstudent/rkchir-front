@@ -25,25 +25,25 @@ const DesktopHeader = () => {
         <div className="desktop-header">
             <ul className="header-bar">
                 <li className="header-bar__item header-logo">
-                    <Link to="/" className="header-bar__item-link">
+                    <a href="/" className="header-bar__item-link">
                         <span>PC_PARTS</span>
-                    </Link>
+                    </a>
                 </li>
                 <li className="header-bar__item">
-                    <Link to="/" className="header-bar__item-link">
+                    <a href="/" className="header-bar__item-link">
                         <span>Home</span>
-                    </Link>
+                    </a>
                 </li>
                 <li className="header-bar__item">
-                    <Link to="/catalog" className="header-bar__item-link">
+                    <a href="/catalog" className="header-bar__item-link">
                         <span>Catalog</span>
-                    </Link>
+                    </a>
                 </li>
 
                 <li className="header-bar__item">
-                    <Link to="/configure" className="header-bar__item-link">
+                    <a href="/configure" className="header-bar__item-link">
                         <span>Configure</span>
-                    </Link>
+                    </a>
                 </li>
 
                 <li className="header-bar__item header-bar__item-calc">
@@ -71,11 +71,11 @@ const DesktopHeader = () => {
                 </li>
 
                 <li className="header-bar__item header-register">
-                    <Link to="/register">
+                    <a href="/register">
                         <button type="button" className="button-animated">
                             <span>Sign up</span>
                         </button>
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </div>

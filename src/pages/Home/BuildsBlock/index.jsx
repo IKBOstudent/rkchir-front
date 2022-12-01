@@ -12,11 +12,11 @@ const BuildsBlock = () => {
     const images = [img_pc1, img_pc2, img_pc3, img_pc2, img_pc1, img_pc3];
     return (
         <div id="builds-block" className="builds-container">
-            <h2>Builds</h2>
+            <h2>Explore Pre-Built Desktops</h2>
 
             <div className="builds-box-grid">
                 {images.map((item, id) => (
-                    <BuildCard key={id} image_url={item} />
+                    <BuildCard key={id} id={id} image_url={item} />
                 ))}
             </div>
         </div>
