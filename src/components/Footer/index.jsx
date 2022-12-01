@@ -28,18 +28,6 @@ const SocialIcon = ({ icon }) => {
 };
 
 const Footer = () => {
-    // React.useEffect(() => {
-    //     const script = document.createElement("script");
-    //     // script.defer = true;
-    //     script.src = "./ul_script.js";
-
-    //     document.body.appendChild(script);
-
-    //     return () => {
-    //         document.body.removeChild(script);
-    //     };
-    // }, []);
-
     return (
         <footer>
             <article className="footer-container">

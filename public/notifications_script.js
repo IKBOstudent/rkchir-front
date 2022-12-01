@@ -48,13 +48,13 @@ notificationButton.addEventListener("click", () => {
     }, 10000);
 });
 
-const picture = document.createElement("div");
-picture.innerHTML = `<img src="/static/media/poster3.3e9409764881b0c7675e.jpg">`;
-picture.style.position = "fixed";
-picture.firstChild.style.verticalAlign = "top";
-picture.style.top = `calc(50% - ${picture.firstChild.naturalHeight / 2}px)`;
-picture.style.left = `calc(50% - ${picture.firstChild.naturalWidth / 2}px)`;
-picture.style.boxShadow = "0 0 20px 10px #000000aa";
+// const picture = document.createElement("div");
+// picture.innerHTML = `<img src="/static/media/poster3.3e9409764881b0c7675e.jpg">`;
+// picture.style.position = "fixed";
+// picture.firstChild.style.verticalAlign = "top";
+// picture.style.top = `calc(50% - ${picture.firstChild.naturalHeight / 2}px)`;
+// picture.style.left = `calc(50% - ${picture.firstChild.naturalWidth / 2}px)`;
+// picture.style.boxShadow = "0 0 20px 10px #000000aa";
 
 // document.body.appendChild(picture);
 
