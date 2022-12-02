@@ -1,7 +1,7 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 body {
-    font-family: "Satoshi", sans-serif;
+    font-family: 'Satoshi', sans-serif;
     margin: 0;
     overflow-x: hidden;
 }
@@ -46,7 +46,7 @@ button {
 
     &-default {
         position: relative;
-        height: 40px;
+
         min-width: 40px;
         padding: 0.25rem 1rem;
 
@@ -99,7 +99,7 @@ button {
 
     &-animated {
         position: relative;
-        height: 40px;
+        min-height: 40px;
         min-width: 40px;
         padding: 0.25rem 1rem;
 
@@ -114,7 +114,7 @@ button {
         }
 
         &::before {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
             top: 0;
@@ -126,7 +126,7 @@ button {
         }
 
         &::after {
-            content: "";
+            content: '';
             border-radius: 2px;
             background-color: $color-default;
             opacity: 0.7;

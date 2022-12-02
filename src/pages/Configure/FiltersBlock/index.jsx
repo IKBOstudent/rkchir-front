@@ -1,7 +1,7 @@
-import React from "react";
-import Filter from "./Filter";
+import React from 'react';
+import Filter from './Filter';
 
-import "./filtersblock.scss";
+import './filtersblock.scss';
 
 const ArrowIcon = () => {
     return (
@@ -12,39 +12,40 @@ const ArrowIcon = () => {
 };
 
 function onMoveSlider(event) {
-    console.log(event);
-    const slider = document.getElementById("slider");
-    console.dir(slider);
-    // console.log(event.offsetX);
-    // const max_pos = slider.parentElement.clientWidth;
-    // const new_pos = max_pos < event.offsetX ? max_pos : event.offsetX;
-    // console.log(new_pos);
-    // slider.style.left = new_pos + "px";
+    const slider = document.getElementById('slider');
+    let lineBox = slider.parentElement.getBoundingClientRect();
+
+    let newLeft = Number(event.pageX) - Number(lineBox.left);
+    const maxLeft = lineBox.width - slider.offsetWidth;
+
+    if (newLeft < 0) {
+        newLeft = 0;
+    } else if (newLeft > maxLeft) {
+        newLeft = maxLeft;
+    }
+
+    slider.style.left = newLeft + 'px';
 }
 
 function stopSliding() {
-    console.log("removed listener from mousemove");
-    document.removeEventListener("mousemove", onMoveSlider);
-    console.log("removed listener from mouseup");
-    document.removeEventListener("mouseup", stopSliding);
+    document.removeEventListener('mousemove', onMoveSlider);
+    document.removeEventListener('mouseup', stopSliding);
 }
 
 function handleTapSlider(event) {
     event.preventDefault();
 
-    console.log("added listener on mousemove");
-    document.addEventListener("mousemove", onMoveSlider);
-    console.log("added listener on mouseup");
-    document.addEventListener("mouseup", stopSliding);
+    document.addEventListener('mousemove', onMoveSlider);
+    document.addEventListener('mouseup', stopSliding);
 }
 
 const FiltersBlock = () => {
     const filters = {
-        Price: { type: 0, items: ["From", "To"] },
-        Brand: { type: 1, items: ["AMD", "Intel"] },
+        Price: { type: 0, items: ['From', 'To'] },
+        Brand: { type: 1, items: ['AMD', 'Intel'] },
         Model: {
             type: 1,
-            items: ["Intel Core i5", "Intel Core i7", "Intel Core i9"],
+            items: ['Intel Core i5', 'Intel Core i7', 'Intel Core i9'],
         },
     };
 

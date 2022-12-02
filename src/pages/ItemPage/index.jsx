@@ -1,27 +1,27 @@
-import React from "react";
+import React from 'react';
 
-import "./item-page.scss";
+import './item-page.scss';
 
-import Header from "@components/Header";
-import Footer from "@components/Footer";
+import Header from '@components/Header';
+import Footer from '@components/Footer';
 
-import img_pc1_front from "@assets/img_pc1.png";
-import img_pc1_top from "@assets/img_pc1_top.png";
-import img_pc1_side from "@assets/img_pc1_side.png";
-import img_pc1_back from "@assets/img_pc1_back.png";
+import img_pc1_front from '@assets/img_pc1.png';
+import img_pc1_top from '@assets/img_pc1_top.png';
+import img_pc1_side from '@assets/img_pc1_side.png';
+import img_pc1_back from '@assets/img_pc1_back.png';
 
 const ItemPage = () => {
     const images = [img_pc1_front, img_pc1_top, img_pc1_side, img_pc1_back];
 
     function handleClickImage(event, id) {
         const selected = images[id];
-        const current = document.getElementById("selected-image");
+        const current = document.getElementById('selected-image');
         current.src = selected;
         const ul_children = event.target.parentElement.children;
         for (let li of ul_children) {
-            li.classList.remove("current-image");
+            li.classList.remove('current-image');
             if (li === event.target) {
-                li.classList.add("current-image");
+                li.classList.add('current-image');
             }
         }
     }
@@ -38,11 +38,11 @@ const ItemPage = () => {
                             <ul>
                                 {images.map((item, id) => (
                                     <li
+                                        className={id === 0 ? 'current-image' : ''}
                                         key={id}
-                                        onClick={event => {
+                                        onClick={(event) => {
                                             handleClickImage(event, id);
-                                        }}
-                                    >
+                                        }}>
                                         <img src={item} alt="item" />
                                     </li>
                                 ))}
