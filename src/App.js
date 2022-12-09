@@ -1,19 +1,25 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
-import "@styles/global.scss";
+import '@styles/global.scss';
 
-import Home from "@pages/Home";
-import Cart from "@pages/Cart";
-import Catalog from "@pages/Catalog";
-import Configure from "@pages/Configure";
-import CalculatorBottleneck from "@pages/Calculators/Bottleneck";
-import SignUp from "@pages/SignUp";
-import LogIn from "@pages/LogIn";
-import ErrorPage from "@pages/ErrorPage";
-import ItemPage from "@pages/ItemPage";
+import Home from '@pages/Home';
+import Cart from '@pages/Cart';
+import Catalog from '@pages/Catalog';
+import Configure from '@pages/Configure';
+import CalculatorBottleneck from '@pages/Calculators/Bottleneck';
+import SignUp from '@pages/SignUp';
+import LogIn from '@pages/LogIn';
+import ErrorPage from '@pages/ErrorPage';
+import ItemPage from '@pages/ItemPage';
 
 const App = () => {
+    const { pathname } = useLocation();
+
+    React.useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     return (
         <Routes>
             <Route path="/" element={<Home />} />

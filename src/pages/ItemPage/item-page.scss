@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import '@styles/variables';
 
 .item {
     &-box {
@@ -105,8 +105,8 @@
         }
 
         &-img {
-            img {
-                max-width: 200px;
+            div {
+                height: 250px;
             }
         }
 
